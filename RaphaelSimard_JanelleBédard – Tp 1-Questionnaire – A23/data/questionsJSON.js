@@ -15,17 +15,20 @@
         "optionC": "document.getElementById",
         "optionD": "document.getElementsByTagName",
 
-        "reponse": "document.getElementByBigMac"
+        "reponse": "document.getElementByBigMac",
+        "nbrPoints": 1
     },
 
     {
-        "question": "Quelle méthode n'existe pas dans le DOM ?",
-        "optionA": "document.getElementsByBigMac",
-        "optionB": "document.getElementsByClassName",
+        "question": "Quelle est la bonne manière d'écrire un commentaire en JavaScript?",
+        "optionA": "<!-- Ceci est un commentaire -->",
+        "optionB": "{* Ceci est un commentaire *}",
         "optionC": "document.getElementById",
         "optionD": "document.getElementsByTagName",
 
-        "reponse": "document.getElementByBigMac"
+        "reponse": "document.getElementByBigMac",
+        "nbrPoints": 1
+
     }
 
 
