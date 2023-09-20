@@ -16,7 +16,32 @@
         "optionD": "document.getElementsByTagName",
 
         "reponse": "document.getElementByBigMac"
+    },
+
+    {
+        "question": "Quelle méthode n'existe pas dans le DOM ?",
+        "optionA": "document.getElementsByBigMac",
+        "optionB": "document.getElementsByClassName",
+        "optionC": "document.getElementById",
+        "optionD": "document.getElementsByTagName",
+
+        "reponse": "document.getElementByBigMac"
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     ]
 
