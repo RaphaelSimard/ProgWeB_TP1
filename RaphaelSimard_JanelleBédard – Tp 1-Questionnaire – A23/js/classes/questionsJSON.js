@@ -6,6 +6,9 @@
 
 //Faites quelque chose de simple comme on a vu ensemble.
 
+//Raph, je pense que vu que c'est des "map", la bonne réponse ça peut juste être l'index de la map, genre "optionA".
+// Cette partie par copilot, c'est pas moi: Si tu veux pas, tu peux juste mettre la réponse en string, mais je pense que c'est plus simple comme ça.
+
 let tabAssQuestions = [
      {
         "question1": "Quelle méthode n'existe pas dans le DOM ?",
@@ -31,13 +34,13 @@ let tabAssQuestions = [
 
 
     {
-        "question3": "Quelle elle est la bonne réponse de 1+1 ?",
-        "optionA": "je me fais chier a écrire des questions",
-        "optionB": "salamalécoum les frères",
-        "optionC": "2",
-        "optionD": "4 (c'est la bonne réponse)",
+        "question3": "Sur quelle structure de conception des objets Javascript est-il basé ?",
+        "optionA": "Object",
+        "optionB": "Prototype",
+        "optionC": "Classe",
+        "optionD": "Structure pyramidale ",
 
-        "reponse": "2",
+        "reponse": "optionB",
         "nbrePoints": 1
     },
 
@@ -98,8 +101,8 @@ let tabAssQuestions = [
 
     {
         "question9": "Comment faut-il déclarer une variable en JavaScript ?",
-        "optionA": "varchar2 valeur = 1",
-        "optionB": "varbus2 valeur = 1",
+        "optionA": "int valeur = 1",
+        "optionB": "varbus valeur = 1",
         "optionC": "let valeur = 1",
         "optionD": "laite valeur = 1",
 
@@ -110,7 +113,7 @@ let tabAssQuestions = [
     {
         "question10": "Quel opérateur faut-il utiliser pour concaténer deux chaînes de caractères ?",
         "optionA": "/",
-        "optionB": "_",
+        "optionB": "-",
         "optionC": "+",
         "optionD": "+=",
 
@@ -121,7 +124,7 @@ let tabAssQuestions = [
     {
         "question11": "Quel est le rôle principal de JavaScript dans le développement web ",
         "optionA": "Pouvoir mettre des gros boutons rouges partout sur les pages webs",
-        "optionB": "Ajouter des fonctionnalités intéractives aux pages web",
+        "optionB": "Ajouter des fonctionnalités interactives aux pages web",
         "optionC": "Ajouter des fonctionnalités dynamiques aux pages web",
         "optionD": "Ajouter des fonctionnalités statiques aux pages web",
 
@@ -163,13 +166,13 @@ let tabAssQuestions = [
         "nbrePoints": 1
     },
 
-    { "question15": "Cette question va t-elle etre utilisée par le prof ?",
-        "optionA": "Oui",
-        "optionB": "Non",
-        "optionC": "Peut-être",
-        "optionD": "Je ne sais pas",
+    { "question15": "Comment écrit-on une conditionnelle en Javascript?",
+        "optionA": "if (i == 5){ }",
+        "optionB": "if i == 5 then { },",
+        "optionC": "si (i == 5) alors { }",
+        "optionD": "if i == 5 { }",
 
-        "reponse": "Non",
+        "reponse": "optionA",
         nbrePoints: 1
     }
 ]
