@@ -5,17 +5,17 @@
 //Mettre vos questions au format JSON ici. Un seul objet principal pour toutes les questions
 
 //Faites quelque chose de simple comme on a vu ensemble.
-//tableau associatif == MAP
 
-[
-    {
+let tabAssQuestions = [
+     {
         "question1": "Quelle méthode n'existe pas dans le DOM ?",
-        "optionA": "document.getElementsByBigMac",
-        "optionB": "document.getElementsByClassName",
-        "optionC": "document.getElementById",
-        "optionD": "document.getElementsByTagName",
+            "optionA": "document.getElementsByBigMac",
+            "optionB": "document.getElementsByClassName",
+            "optionC": "document.getElementById",
+            "optionD": "document.getElementsByTagName",
 
-        "reponse": "document.getElementByBigMac"
+        "reponse": "document.getElementByBigMac",
+            "nbrPoints": 1
     },
 
     {
@@ -89,7 +89,7 @@
         "question8": "Comment ajoutez-vous un événement de clic à un élément HTML en JavaScript ?",
         "optionA": "addEventListener('click', myFunction)",
         "optionB": "onclick = myFunction()",
-        "optionC": "event.stopImmigration()", //lol // TODO (c'est le github copilote qui a ajouter le // lol ))
+        "optionC": "event.stopImmigration()",
         "optionD": "addRessource('click', myFunction)",
 
         "reponse": "addEventListener('click', myFunction)",
@@ -120,8 +120,8 @@
 
     {
         "question11": "Quel est le rôle principal de JavaScript dans le développement web ",
-        "optionA": "Pouvoir mettre des gros boutons rouges partout sur les pages web",
-        "optionB": "Ajouter des fonctionnalités tnteractives aux pages web",
+        "optionA": "Pouvoir mettre des gros boutons rouges partout sur les pages webs",
+        "optionB": "Ajouter des fonctionnalités intéractives aux pages web",
         "optionC": "Ajouter des fonctionnalités dynamiques aux pages web",
         "optionD": "Ajouter des fonctionnalités statiques aux pages web",
 
@@ -162,4 +162,14 @@
         "reponse": "querySelector()",
         "nbrePoints": 1
     },
+
+    { "question15": "Cette question va t-elle etre utilisée par le prof ?",
+        "optionA": "Oui",
+        "optionB": "Non",
+        "optionC": "Peut-être",
+        "optionD": "Je ne sais pas",
+
+        "reponse": "Non",
+        nbrePoints: 1
+    }
 ]
