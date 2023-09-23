@@ -123,10 +123,10 @@ function gererInterfaceSaisie(baliseCadre) {
  *
  * @param e {event}
  */
-function gererAccesBoutonCalculer(e){
+function gererAccesBoutonCalculer(e) {
     if (nombreChampsValidesOK()) {
         boutonCalculer.disabled = false
-    } else{
+    } else {
         boutonCalculer.disabled = true;
     }
 }
@@ -136,7 +136,7 @@ function gererAccesBoutonCalculer(e){
  *
  * @param e {event}
  */
-function gererBoutonCalculer(e){
+function gererBoutonCalculer(e) {
     if (nombreChampsValidesOK()) {
         //Créer les objets avec les données du formulaire
         personne1 = new Personne(nommoi.value, parseFloat(taillemoi.value), parseFloat(poidsmoi.value));
