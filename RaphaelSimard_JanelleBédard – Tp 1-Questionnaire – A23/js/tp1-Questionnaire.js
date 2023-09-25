@@ -18,18 +18,24 @@ titre.textContent = " السَّلَامُ عَلَيْكُمْ وَ رَحْم�
 const paragraphe1 = document.createElement("p1");
 paragraphe1.textContent = "JEUX QUESTIONNAIRE";
 const paragraphe2 = document.createElement("p2");
-paragraphe2.textContent = "Je vous invite à participer à un petit jeu-questionnaire qui comporte 5 questions choisies au hasard dans un semble de questions." +
-    "Pour chaque question, vous devez choisir une réponse parmi les 4 choix proposés. En souhaitant que vous ayez autant de plaisir que nous qui fait ce script 0_0" + "' (Ps: à l'aide)";
-
-const bouton = document.createElement("bouton");
-bouton.id = "bouton";
-bouton.textContent = "Commencer le jeu";
+paragraphe2.textContent = "Je vous invite à participer à un petit jeu-questionnaire qui comporte 5 questions choisies au hasard dans un ensemble de questions." +
+    "Pour chaque question, vous devez choisir une réponse parmi les 4 choix proposés. En souhaitant que vous ayez autant de plaisir que nous qui fait ce script 0_0" + "'";
 
 
 // ici on fait la création du bouton
+const bouton = document.createElement("bouton");
+bouton.id = "bouton";
+bouton.textContent = "Commencer le quiz";
 bouton.addEventListener("click", function () {
     alert("Vous avez cliqué sur le bouton")
+    viderLintérieurDuRectangle();
 });
+
+function viderLintérieurDuRectangle() {
+    for (let i = 0; i < 4; i++) {
+        rectangle.removeChild(rectangle.childNodes[0]);
+    }
+}
 // on fait les appends, ca ressemble a ce que le prof a fait
 rectangle.appendChild(titre);
 rectangle.appendChild(paragraphe1);
