@@ -3,27 +3,65 @@
 
 #rectangle {
     width: 90%;
-    height: 10%;
-    background-color: rgba(154, 130, 58, 0.54);
+    height: 100%;
+    background-color: rgba(183, 167, 131, 0.54);
     border: 2px solid saddlebrown;
     text-align: center;
-
+    border-radius: 10px;
 }
 
 #titre {
     font-size: 24px;
     font-weight: bold;
     margin-top: 20px;
+    text-align: center;
+    font-family: Chiller, fantasy;
 }
-p {
+
+p1 {
     margin: 10px;
-    font-size: 16px;
-    text-align: left;
+    font-size: 20px;
+    text-align: center;
+    color: blue;
+    display: block;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
 p2 {
     margin: 10px;
-    font-size: 20px;
+    font-size: 16px;
     text-align: left;
-    color: blue;
+    font-family: Consolas, monaco, monospace;
+    display: block;
 }
+
+#bouton {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    background-color: red;
+    border-radius: 6px;
+    font-family: cursive;
+}
+
+#pMauvaiseRéponse {
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+#pBonneRéponse {
+    color: green;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+#pLaBonneRéponseQuiAPasÉtéDonné {
+    color: blue;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+

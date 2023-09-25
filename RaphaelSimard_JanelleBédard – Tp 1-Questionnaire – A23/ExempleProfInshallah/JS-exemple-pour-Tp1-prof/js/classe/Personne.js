@@ -68,7 +68,6 @@ class Personne {
         } else if (imc >= 40) {
             significatinon = POIDS_PLUS_DE_40;
         }
-
         return significatinon;
     }
 }
