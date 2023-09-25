@@ -1,13 +1,25 @@
 /* Mettre tous vos styles ici */
 
+body{
+    background-image: url("https://images.unsplash.com/photo-1542401886-65d6c61db217?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+
 #rectangle {
-    height: 500px;
+    height: 480px;
     padding: 12px;
     background-color: rgb(253, 226, 194);
     border: 2px solid #848484;
     text-align: left;
-    border-radius: 10px;
-    margin-top: 40px;
+    border-radius: 16px 1px;
+    margin: 60px 120px;
+    opacity: 100%;
+
 }
 
 #titre {
@@ -29,7 +41,8 @@ p1 {
 }
 
 p2 {
-    margin: 24px 16px;
+
+    margin: 24px 25% 24px 16px;
     font-size: 16px;
     text-align: justify;
     color: #304e4e;
@@ -40,14 +53,16 @@ p2 {
 
 #bouton {
     text-align: left;
-    margin: 18px 8px;
-    padding: 4px 8px;
+    margin: 8px 16px;
+    padding: 4px 12px;
     font-size: 20px;
     font-weight: bold;
     font-family: "Century Gothic", serif;
     border-radius: 16px 3px 16px 3px;
-    border: 2px solid #b7dae6;
+    border: 2px solid #fda200;
     background: white;
+    position: relative;
+    top: 250px;
 
 }
 
