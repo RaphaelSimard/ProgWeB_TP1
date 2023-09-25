@@ -21,9 +21,9 @@ const paragraphe2 = document.createElement("p2");
 paragraphe2.textContent = "Je vous invite à participer à un petit jeu-questionnaire qui comporte 5 questions choisies au hasard dans un semble de questions." +
     "Pour chaque question, vous devez choisir une réponse parmi les 4 choix proposés. En souhaitant que vous ayez autant de plaisir que nous qui fait ce script 0_0" + "' (Ps: à l'aide)";
 
-const bouton = document.createElement("boutton");
+const bouton = document.createElement("bouton");
 bouton.id = "bouton";
-let 
+bouton.textContent = "Commencer le jeu";
 
 // ici on fait la création du bouton
 bouton.addEventListener("click", function () {
