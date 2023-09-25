@@ -1,12 +1,11 @@
-
 /* Mettre tous vos styles ici */
 
 #rectangle {
     height: 500px;
-
-    background-color: rgba(183, 167, 131, 0.54);
-    border: 2px solid saddlebrown;
-    text-align: center;
+    padding: 12px;
+    background-color: rgb(253, 226, 194);
+    border: 2px solid #848484;
+    text-align: left;
     border-radius: 10px;
     margin-top: 40px;
 }
@@ -14,36 +13,42 @@
 #titre {
     font-size: 24px;
     font-weight: bold;
-    margin-top: 20px;
-    text-align: center;
-    font-family: Chiller, fantasy;
+    margin: 16px 8px;
+    text-align: left;
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 p1 {
     margin: 10px;
     font-size: 20px;
-    text-align: center;
-    color: blue;
+    text-align: left;
+    color: #67a1e1;
+    font-weight: bold;
     display: block;
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
 p2 {
-    margin: 10px;
+    margin: 24px 16px;
     font-size: 16px;
-    text-align: left;
+    text-align: justify;
+    color: #304e4e;
+    font-weight: bold;
     font-family: Consolas, monaco, monospace;
     display: block;
 }
 
 #bouton {
+    text-align: left;
+    margin: 18px 8px;
+    padding: 4px 8px;
     font-size: 20px;
     font-weight: bold;
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-    background-color: red;
-    border-radius: 6px;
-    font-family: cursive;
+    font-family: "Century Gothic", serif;
+    border-radius: 16px 3px 16px 3px;
+    border: 2px solid #b7dae6;
     background: white;
+
 }
 
 #pMauvaiseRéponse {
