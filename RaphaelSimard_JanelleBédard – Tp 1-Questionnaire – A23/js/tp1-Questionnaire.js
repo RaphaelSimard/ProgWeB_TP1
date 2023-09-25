@@ -25,6 +25,7 @@ const bouton = document.createElement("bouton");
 bouton.id = "bouton";
 bouton.textContent = "Commencer le jeu";
 
+
 // ici on fait la création du bouton
 bouton.addEventListener("click", function () {
     alert("Vous avez cliqué sur le bouton")
