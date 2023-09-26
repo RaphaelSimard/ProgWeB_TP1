@@ -11,7 +11,7 @@ rectangle.id = "rectangle";
 // ici on fait la magnifique création du titre
 const titre = document.createElement("div");
 titre.id = "titre";
-titre.textContent = "Salam, bienvenue sur le quiz JavaScript de Janelle et Raphael";
+titre.textContent = "Salam maleykoum, bienvenue sur le quiz JavaScript de Janelle et Raphael";
 
 // ici on fait la création des paragraphes
 
