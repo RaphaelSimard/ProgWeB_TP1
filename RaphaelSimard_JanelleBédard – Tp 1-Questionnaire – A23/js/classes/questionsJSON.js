@@ -1,9 +1,7 @@
 "use strict";
 
 //IMPORTANT : Pour la syntaxe JSON voir ce lien : https://www.json.org/json-fr.html
-
 //Mettre vos questions au format JSON ici. Un seul objet principal pour toutes les questions
-
 //Faites quelque chose de simple comme on a vu ensemble.
 
 
@@ -17,7 +15,7 @@ let tabAssQuestions = [
             optionD: "document.getElementsByTagName",
         },
 
-        BonneReponse: "document.getElementByBigMac",
+        BonneReponse: optionA,
         nbrPoints: 1
     },
 
@@ -29,7 +27,7 @@ let tabAssQuestions = [
             optionC: "hideElement()",
             optionD: "deleteElement()",
         },
-        BonneReponse: "removeChild()",
+        BonneReponse: optionA,
         nbrePoints: 1
     },
 
@@ -43,7 +41,7 @@ let tabAssQuestions = [
             optionD: "Structure pyramidale ",
 
         },
-        BonneReponse: "optionB",
+        BonneReponse: optionB,
         nbrePoints: 1
     },
 
@@ -56,7 +54,7 @@ let tabAssQuestions = [
             optionD: "event.preventDefault()",
 
         },
-        BonneReponse: "event.preventDefault()",
+        BonneReponse: optionD,
         nbrePoints: 1
     },
 
@@ -65,11 +63,11 @@ let tabAssQuestions = [
         reponses: {
             optionA: "<!--- Ceci est un commentaire -->",
             optionB: "{* Ceci est un commentaire *}",
-            optionC: "document.getElementById",
-            optionD: "document.getElementsByTagName",
+            optionC: "// Ceci est un commentaire",
+            optionD: "$-{ Ceci est un commentaire }-$",
 
         },
-        BonneReponse: "document.getElementByBigMac",
+        BonneReponse: optionC,
         nbrPoints: 1
     },
 
@@ -82,7 +80,7 @@ let tabAssQuestions = [
             optionD: "pop()",
 
         },
-        BonneReponse: "shift()",
+        BonneReponse: optionB,
         nbrPoints: 1
     },
 
@@ -95,7 +93,7 @@ let tabAssQuestions = [
             optionD: ".innerHTML",
 
         },
-        reponse: "innerHTML",
+        reponse: optionD,
         nbrePoints: 1
     },
 
@@ -108,7 +106,7 @@ let tabAssQuestions = [
             optionD: "addRessource('click', myFunction)",
 
         },
-        reponse: "addEventListener('click', myFunction)",
+        reponse: optionA,
         nbrePoints: 1
     },
 
@@ -121,7 +119,7 @@ let tabAssQuestions = [
             optionD: "laite valeur = 1",
 
         },
-        reponse: "let valeur = 1",
+        reponse: optionC,
         nbrePoints: 1
     },
 
@@ -134,7 +132,7 @@ let tabAssQuestions = [
             optionD: "+=",
 
         },
-        reponse: "+",
+        reponse: optionC,
         nbrePoints: 1
     },
 
@@ -147,7 +145,7 @@ let tabAssQuestions = [
             optionD: "Ajouter des fonctionnalités statiques aux pages web",
 
         },
-        reponse: "",
+        reponse: optionC,
         nbrePoints: 1
     },
 
@@ -160,7 +158,7 @@ let tabAssQuestions = [
             optionD: "let tableau = []",
 
         },
-        reponse: "let tableau = []",
+        reponse: optionD,
         nbrePoints: 1
     },
 
@@ -173,7 +171,7 @@ let tabAssQuestions = [
             optionC: "tableau.merge()",
             optionD: "tableau.add()",
         },
-        reponse: "tableau.concat()",
+        reponse: optionB,
         nbrePoints: 1
     },
 
@@ -186,7 +184,7 @@ let tabAssQuestions = [
         optionD: "dairyQuerySelector()",
         },
 
-        reponse: "querySelector()",
+        reponse: optionC,
         nbrePoints: 1
     },
 
@@ -199,7 +197,6 @@ let tabAssQuestions = [
         optionD: "if i == 5 { }",
 
         },
-        reponse: "optionA",
-        nbrePoints: 1
+        reponse: optionA, nbrePoints: 1
     }
 ]

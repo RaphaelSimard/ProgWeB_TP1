@@ -66,6 +66,12 @@ p2 {
 
 }
 
+#bouton:hover {
+    background-color: #fda200;
+    color: white;
+    cursor: pointer;
+}
+
 #pMauvaiseRéponse {
     color: red;
     font-size: 16px;

@@ -48,3 +48,6 @@ rectangle.appendChild(bouton);
 
 // fait le append du rectangle dans le rectangle des données
 rectangleDesDonnées.appendChild(rectangle);
+
+
+
