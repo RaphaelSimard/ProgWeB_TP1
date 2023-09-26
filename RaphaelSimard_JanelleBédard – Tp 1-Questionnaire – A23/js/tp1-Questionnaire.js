@@ -2,7 +2,7 @@
 
 //Mettre votre code JS ici
 
-const rectangleDesDonnées = document.getElementById("zoneDeDonnees");
+const rectangleDesDonnees = document.getElementById("zoneDeDonnees");
 
 
 const rectangle = document.createElement("div");
@@ -28,13 +28,13 @@ bouton.id = "bouton";
 bouton.textContent = "Commencer le quiz";
 bouton.addEventListener("click", function () {
     alert("Vous avez cliqué sur le bouton")
-    viderLintérieurDuRectangle();
+    viderLinterieurDuRectangle();
 });
 
 /**
  * Fonction qui vide le rectangle après le click du bouton
  */
-function viderLintérieurDuRectangle() {
+function viderLinterieurDuRectangle() {
     while (rectangle.firstChild) {
         rectangle.removeChild(rectangle.firstChild);
     }
@@ -47,7 +47,7 @@ rectangle.appendChild(paragraphe2);
 rectangle.appendChild(bouton);
 
 // fait le append du rectangle dans le rectangle des données
-rectangleDesDonnées.appendChild(rectangle);
+rectangleDesDonnees.appendChild(rectangle);
 
 
 
