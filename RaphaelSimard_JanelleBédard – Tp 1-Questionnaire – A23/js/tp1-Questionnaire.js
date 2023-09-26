@@ -51,5 +51,8 @@ rectangleDesDonnees.appendChild(rectangle);
 
 let texte = "bonjur"
 
+//on fait un tableau ordonné qui contient les 15 questions qui sont contenues dans le JSON et on shuffle le tableau.
+//Ensuite on choisi 5 questions au hasard dans le tableau et on les mets dans un autre tableau.
+//On fait un for qui va créer les 5 questions dans le rectangle des données.
 
 

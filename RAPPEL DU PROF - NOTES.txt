@@ -1,7 +1,7 @@
 - Mettre la réponse directement au cas si on change l'odre des options
 
 - FAIRE UN 5EME CHOIX DE QUESTION
-- Mettre un " - B " pour se rappeller de la bonne réponse
+- Mettre un " - B " pour se rappeller de la bonne réponse ✅
 - Hauteur du rectangle fixe à réparer ✅
 - Changer HTML pour que ce soit plus structuré, avec objects
 - field set pour écrire sur la bordure avec une légende en HTML

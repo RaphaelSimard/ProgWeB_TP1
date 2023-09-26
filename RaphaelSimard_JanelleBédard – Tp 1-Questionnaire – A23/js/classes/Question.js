@@ -1,11 +1,8 @@
 "use strict";
 
-//Créer une classe Question
-//prendre 5 questions random, créer un tableau d'objets "questions"
-//pour chaque question, créer un objet question avec les attributs suivants:
-//question, reponses, bonneReponse, nbrPoints
-//pour chaque question, créer un objet reponses avec les attributs suivants:
-//optionA, optionB, optionC, optionD
+//Ceci est la classe question, on ne fait QUE fabriquer les objets ici
+
+
 class Question {
     constructor(question, reponses, bonneReponse, nbrePoints) {
         this._question = question;
