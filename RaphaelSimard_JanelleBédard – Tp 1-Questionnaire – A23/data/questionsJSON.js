@@ -15,7 +15,7 @@ let tabAssQuestions = [
             optionD: "document.getElementsByTagName",
         },
 
-        BonneReponse: "document.getElementsByBigMac - A",
+        bonneReponse: "document.getElementsByBigMac - A",
         nbrPoints: 1
     },
 
@@ -27,7 +27,7 @@ let tabAssQuestions = [
             optionC: "hideElement()",
             optionD: "deleteElement()",
         },
-        BonneReponse: "removeChild() - A",
+        bonneReponse: "removeChild() - A",
         nbrePoints: 1
     },
 
@@ -41,7 +41,7 @@ let tabAssQuestions = [
             optionD: "Structure pyramidale ",
 
         },
-        BonneReponse: "Prototype - B",
+        bonneReponse: "Prototype",
         nbrePoints: 1
     },
 
@@ -54,7 +54,7 @@ let tabAssQuestions = [
             optionD: "event.preventDefault() - D",
 
         },
-        BonneReponse: "event.preventDefault() - D",
+        bonneReponse: "event.preventDefault() - D",
         nbrePoints: 1
     },
 
@@ -67,7 +67,7 @@ let tabAssQuestions = [
             optionD: "$-{ Ceci est un commentaire }-$",
 
         },
-        BonneReponse: "// Ceci est un commentaire - C",
+        bonneReponse: "// Ceci est un commentaire - C",
         nbrPoints: 1
     },
 
@@ -75,12 +75,12 @@ let tabAssQuestions = [
         question6: "Quelle méthode JavaScript est utilisée pour supprimer le dernier élément d'un tableau ?",
         reponses: {
             optionA: "push()",
-            optionB: "shift()",
+            optionB: "shift() - B",
             optionC: "push()",
             optionD: "pop()",
 
         },
-        BonneReponse: "shift() - B",
+        bonneReponse: "shift() - B",
         nbrPoints: 1
     },
 
@@ -90,23 +90,23 @@ let tabAssQuestions = [
             optionA: ".text",
             optionB: ".value",
             optionC: ".textContent",
-            optionD: ".innerHTML",
+            optionD: ".innerHTML - D",
 
         },
-        reponse: ".innerHTML - D",
+        bonneReponse: ".innerHTML - D",
         nbrePoints: 1
     },
 
     {
         question8: "Comment ajoutez-vous un événement de clic à un élément HTML en JavaScript ?",
         reponses: {
-            optionA: "addEventListener('click', myFunction)",
+            optionA: "addEventListener('click', myFunction) - A",
             optionB: "onclick = myFunction()",
             optionC: "event.stopImmigration()",
             optionD: "addRessource('click', myFunction)",
 
         },
-        reponse: "addEventListener('click', myFunction) - A",
+        bonneReponse: "addEventListener('click', myFunction) - A",
         nbrePoints: 1
     },
 
@@ -115,11 +115,11 @@ let tabAssQuestions = [
         reponses: {
             optionA: "int valeur = 1",
             optionB: "varbus valeur = 1",
-            optionC: "let valeur = 1",
+            optionC: "let valeur = 1 - C",
             optionD: "laite valeur = 1",
 
         },
-        reponse: "let valeur = 1 - C",
+        bonneReponse: "let valeur = 1 - C",
         nbrePoints: 1
     },
 
@@ -128,11 +128,11 @@ let tabAssQuestions = [
         reponses: {
             optionA: "/",
             optionB: "-",
-            optionC: "+",
+            optionC: "+ - C",
             optionD: "+=",
 
         },
-        reponse: "+ - C",
+        bonneReponse: "+ - C",
         nbrePoints: 1
     },
 
@@ -141,11 +141,11 @@ let tabAssQuestions = [
         reponses: {
             optionA: "Pouvoir mettre des gros boutons rouges partout sur les pages webs",
             optionB: "Ajouter des fonctionnalités interactives aux pages web",
-            optionC: "Ajouter des fonctionnalités dynamiques aux pages web",
+            optionC: "Ajouter des fonctionnalités dynamiques aux pages web - C",
             optionD: "Ajouter des fonctionnalités statiques aux pages web",
 
         },
-        reponse: "Ajouter des fonctionnalités dynamiques aux pages web - C",
+        bonneReponse: "Ajouter des fonctionnalités dynamiques aux pages web - C",
         nbrePoints: 1
     },
 
@@ -155,10 +155,10 @@ let tabAssQuestions = [
             optionA: "let tableau = new Array()",
             optionB: "let tableau = {}",
             optionC: "let tableau = null",
-            optionD: "let tableau = []",
+            optionD: "let tableau = [] - D",
 
         },
-        reponse: "let tableau = [] - D",
+        bonneReponse: "let tableau = [] - D",
         nbrePoints: 1
     },
 
@@ -167,11 +167,11 @@ let tabAssQuestions = [
         reponses: {
 
             optionA: "tableau.join()",
-            optionB: "tableau.concat()",
+            optionB: "tableau.concat() - B",
             optionC: "tableau.merge()",
             optionD: "tableau.add()",
         },
-        reponse: "tableau.concat() - B",
+        bonneReponse: "tableau.concat() - B",
         nbrePoints: 1
     },
 
@@ -180,24 +180,24 @@ let tabAssQuestions = [
         reponses: {
         optionA: "querySelectorAll()",
         optionB: "getElementbyId()",
-        optionC: "querySelector()",
+        optionC: "querySelector() - C",
         optionD: "dairyQuerySelector()",
         },
 
-        reponse: "querySelector() - C",
+        bonneReponse: "querySelector() - C",
         nbrePoints: 1
     },
 
     {
         question15: "Comment écrit-on une conditionnelle en Javascript?",
         reponses: {
-        optionA: "if (i == 5){ }",
+        optionA: "if (i == 5){ } - A",
         optionB: "if i == 5 then { },",
         optionC: "si (i == 5) alors { }",
         optionD: "if i == 5 { }",
 
         },
-        reponse: "if (i == 5){ } - A",
+        bonneReponse: "if (i == 5){ } - A",
         nbrePoints: 1
     }
 ]

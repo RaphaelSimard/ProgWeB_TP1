@@ -38,7 +38,7 @@ function creationTableauQuestions(){
         let question = new Question(
             lesQuestions.question,
             lesQuestions.reponses,
-            lesQuestions.BonneReponse,
+            lesQuestions.bonneReponse,
             lesQuestions.nbrePoints
         );
 
