@@ -22,7 +22,7 @@ let tabAssQuestions = [
     {
         question2: "Quelle méthode JavaScript permet de supprimer un élément du DOM ?",
         reponses: {
-            optionA: "removeChild()",
+            optionA: "removeChild() - A",
             optionB: "disposeElement()",
             optionC: "hideElement()",
             optionD: "deleteElement()",
@@ -36,7 +36,7 @@ let tabAssQuestions = [
         question3: "Sur quelle structure de conception des objets Javascript est-il basé ?",
         reponses: {
             optionA: "Object",
-            optionB: "Prototype",
+            optionB: "Prototype - B",
             optionC: "Classe",
             optionD: "Structure pyramidale ",
 
@@ -51,10 +51,10 @@ let tabAssQuestions = [
             optionA: "event.cancelBubble()",
             optionB: "event.stopPropagation()",
             optionC: "event.stopImmediatePropagation()",
-            optionD: "event.preventDefault()",
+            optionD: "event.preventDefault() - D",
 
         },
-        BonneReponse: "event.preventDefault()",
+        BonneReponse: "event.preventDefault() - D",
         nbrePoints: 1
     },
 

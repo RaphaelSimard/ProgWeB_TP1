@@ -10,18 +10,57 @@ function créerBouton() {
     let bouton = creerBaliseX("button", "bouton", "Commencer le quiz", "");
     bouton.addEventListener("click", function () {
         alert("Vous avez cliqué sur le bouton")
+        enleverValeurDuRectangle()
     });
     return bouton;
+}
+
+function enleverValeurDuRectangle() {
+    while (rectangle.hasChildNodes()) {
+        rectangle.removeChild(rectangle.firstChild);
+    }
 }
 function constuireInterfaceQuestion() {
     rectangle.appendChild(creerBaliseX("h1", "titre", "Bienvenue sur le quiz JavaScript de Janelle et Raphael"));
     rectangle.appendChild(creerBaliseX("p", "p1", "JEU QUESTIONNAIRE :o"));
     rectangle.appendChild(creerBaliseX("p", "p2", "Je vous invite à participer à un petit jeu questionnaire qui comporte 5 questions choisies au hasard dans un ensemble de questions. "));
     rectangle.appendChild(créerBouton());
+
 }
 
-constuireInterfaceQuestion();
-rectangleDesDonnées.appendChild(rectangle);
+
+function creationTableauQuestions(){
+    let questionsObjets = [];
+
+    for (let i = 0; i < tabAssQuestions.length; i++) {
+        let lesQuestions = tabAssQuestions[i];
+
+        let question = new Question(
+            lesQuestions.question,
+            lesQuestions.reponses,
+            lesQuestions.BonneReponse,
+            lesQuestions.nbrePoints
+        );
+
+        questionsObjets.push(question);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+constuireInterfaceQuestion(rectangleDesDonnées.appendChild(rectangle));
+creationTableauQuestions();
+alert("allo")
+
 
 
 

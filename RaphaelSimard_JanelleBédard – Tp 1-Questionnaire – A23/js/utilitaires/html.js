@@ -31,6 +31,22 @@ function creerBaliseX(balise, id = "", valeur = "", classe = "") {
     return baliseTemp;
 }
 
+function creerFieldset(id = "", legendText = "") {
+    let fieldset = document.createElement("fieldset");
+
+    if (id !== "") {
+        fieldset.id = id;
+    }
+
+    if (legendText !== "") {
+        let legend = document.createElement("legend");
+        legend.innerText = legendText;
+        fieldset.appendChild(legend);
+    }
+
+    return fieldset;
+}
+
 
 //******************
 //Balises particulières

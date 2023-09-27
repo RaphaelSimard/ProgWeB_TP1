@@ -10,8 +10,6 @@ class Question {
         this._bonneReponse = bonneReponse;
         this._nbrePoints = nbrePoints;
     }
-
-
     get question() {
         return this._question;
     }
@@ -44,6 +42,8 @@ class Question {
         this._nbrePoints = value;
     }
 }
+
+//Ceci est la classe questionnaire, on ne fait QUE fabriquer les objets ici
 
 
 
