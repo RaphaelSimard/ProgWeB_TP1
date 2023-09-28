@@ -9,19 +9,12 @@ rectangle.id = "rectangle";
 function creerBouton() {
     let bouton = creerBaliseX("button", "bouton", "Commencer le quiz", "");
     bouton.addEventListener("click", function () {
-        alert("Vous avez cliqué sur le bouton")
-        enleverValeurDuRectangle();
         //Ici on va appeller la fonction qui crée l'interface de la question
         construireInterfaceQuestion();
     });
     return bouton;
 }
 
-function enleverValeurDuRectangle() {
-    while (rectangle.hasChildNodes()) {
-        rectangle.removeChild(rectangle.firstChild);
-    }
-}
 function constuireInterfaceIntro() {
     rectangle.appendChild(creerBaliseX("h1", "titre", "Bienvenue sur le quiz JavaScript de Janelle et Raphael"));
     rectangle.appendChild(creerBaliseX("p", "p1", "JEU QUESTIONNAIRE :o"));
@@ -56,16 +49,12 @@ function construireInterfaceQuestion() {
     rectangle.innerHTML = "";
 
     rectangle.appendChild(creerBaliseX("h1", "titre", "Question 1"));
-    rectangle.appendChild(creerBaliseX("p", "monresultat"));
-    rectangle.appendChild(creerBaliseX("p", "amiresultat"));
-    rectangle.appendChild(creerBaliseX("p", "question"));
-    rectangle.appendChild(creerBaliseX("p", "erreur"));
 
     //Bouton reprendre
     rectangle.appendChild(creerBaliseX("br"));
     rectangle.appendChild(creerBaliseX("br"));
-    rectangle.appendChild(creerInput("button", "boutonSuivant", "", "Passez à la question suivante", ""));
-    rectangle.appendChild(creerInput("button", "boutonAnnuler", "", "Abandonner la question", ""));
+    rectangle.appendChild(creerInput("button", "bouton", "", "Passez à la question suivante", ""));
+    rectangle.appendChild(creerInput("button", "bouton", "", "Abandonner la question", ""));
 
 }
 
@@ -73,9 +62,6 @@ function construireInterfaceQuestion() {
 
 
 constuireInterfaceIntro(rectangleDesDonnees.appendChild(rectangle));
-creationTableauQuestions();
-alert("allo")
-
 
 
 
