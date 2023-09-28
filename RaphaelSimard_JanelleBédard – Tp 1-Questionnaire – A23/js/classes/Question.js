@@ -45,5 +45,20 @@ class Question {
 
 //Ceci est la classe questionnaire, on ne fait QUE fabriquer les objets ici
 
+class Questionnaire {
+    constructor(tabQuestions) {
+        this._tabQuestions = tabQuestions;
+    }
+
+    get tabQuestions() {
+        return this._tabQuestions;
+    }
+
+    set tabQuestions(value) {
+        this._tabQuestions = value;
+    }
+}
+
+
 
 

@@ -41,7 +41,6 @@ function creationTableauQuestions(){
         );
         questionsObjets.push(question);
     }
-    console.log(questionsObjets);
 }
 
 function construireInterfaceQuestion() {
@@ -55,6 +54,10 @@ function construireInterfaceQuestion() {
     rectangle.appendChild(creerBaliseX("br"));
     rectangle.appendChild(creerInput("button", "bouton", "", "Passez à la question suivante", ""));
     rectangle.appendChild(creerInput("button", "bouton", "", "Abandonner la question", ""));
+    //afficher la premiere question
+    rectangle.appendChild(creerInput("p", "p1", questionsObjets[0].question));
+
+
 
 }
 
