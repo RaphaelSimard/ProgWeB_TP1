@@ -24,31 +24,45 @@ function constuireInterfaceIntro() {
 }
 
 
-/**
- *
- */
+
+
 function creationTableauQuestions(){
     let questionsObjets = [];
-
-    for (let i = 0; i < 4; i++) {
-        let lesQuestions = tabAssQuestions[i];
-
+//Jpense qui faut faire quelque chose comme ça, au moins on a plus d'erreur "tab ass not defined" dans la console...
+// J'ai pas dis que ça fonctionne tho..
+    for (const questionsObjetsKey in questionsObjets) {
         let question = new Question(
+            questionsObjets[questionsObjetsKey].question,
+            questionsObjets[questionsObjetsKey].reponses,
+            questionsObjets[questionsObjetsKey].bonneReponse,
+            questionsObjets[questionsObjetsKey].nbrePoints
+        );
+        questionsObjets.push(question);
+        rectangle.appendChild(creerBaliseX("p", "p1", question.question));
+        console.log(question.question );
+    }
+       /** let question = new Question(
             lesQuestions.question,
             lesQuestions.reponses,
             lesQuestions.bonneReponse,
             lesQuestions.nbrePoints
         );
+<<<<<<< Updated upstream
         questionsObjets.push(question);
     }
+=======
+        questionsObjets.push(question); */
+
+>>>>>>> Stashed changes
 }
+
 
 function construireInterfaceQuestion() {
     //vider le cadre de travail
     rectangle.innerHTML = "";
 
     rectangle.appendChild(creerBaliseX("h1", "titre", "Question 1"));
-
+    creationTableauQuestions();
     //Bouton reprendre
     rectangle.appendChild(creerBaliseX("br"));
     rectangle.appendChild(creerBaliseX("br"));
