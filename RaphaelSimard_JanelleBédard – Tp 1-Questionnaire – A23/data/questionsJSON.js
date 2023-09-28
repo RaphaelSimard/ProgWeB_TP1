@@ -18,7 +18,7 @@ let tabAssQuestions = [
         bonneReponse: "document.getElementsByBigMac - A",
         nbrPoints: 1
     },
-
+    
     {
         question2: "Quelle méthode JavaScript permet de supprimer un élément du DOM ?",
         reponses: {
