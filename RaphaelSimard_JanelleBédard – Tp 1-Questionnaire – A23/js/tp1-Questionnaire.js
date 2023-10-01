@@ -26,28 +26,13 @@ function constuireInterfaceIntro() {
     rectangle.appendChild(creerBaliseX("p", "p1", "JEU QUESTIONNAIRE :o"));
     rectangle.appendChild(creerBaliseX("p", "p2", "Je vous invite à participer à un petit jeu questionnaire qui comporte 5 questions choisies au hasard dans un ensemble de questions. "));
     rectangle.appendChild(creerBouton());
-    creationTableauQuestions();
+
 }
 
 
 
-function creationTableauQuestions() {
-    const tableauDesQuestions = []; // Create an empty array to store questions
-    for (const question of tabAssQuestions) {
-        tableauDesQuestions.push(question); // Push each question object into the new array
-    }
-    shuffleArray(tableauDesQuestions); // Shuffle the questions
-    return tableauDesQuestions;
-}
 
-/**
- ici met dans un tableau 5 questions au hasard (shuffle) pris dans le tableau des questions et le return
- */
-function questionHasard(tableauDesQuestions) {
-    const tableauDeCinqQuestionRandom = tableauDesQuestions.slice(0, 5); // Get the first 5 questions from the shuffled array
-    console.log(tableauDeCinqQuestionRandom);
-    return tableauDeCinqQuestionRandom;
-}
+
 
 
 /**
@@ -60,7 +45,7 @@ function construireInterfaceQuestion() {
     rectangle.appendChild(creerBaliseX("br"));
     rectangle.appendChild(creerBaliseX("br"));
 
-    creationTableauQuestions();
+
     affichageQuestion();
 
     let boutonNextQuestion = rectangle.appendChild(creerInput("button", "bouton", "", "Passez à la question suivante", ""));
@@ -78,9 +63,7 @@ function construireInterfaceQuestion() {
 
 
 function affichageQuestion() {
-    /*
-    Va aller chercher 5 des 15 question du tableau des questions, les shuffle
-     */
+    rectangle.appendChild(creerBaliseX("p", "question", tableauDe5Questions[currentQuestionIndex].question));
     /*Faire un if qui va ajouter (nombreDePoints) au nombre de points si la réponse est bonne
     rappel pour moi même, aller voir la vidéo ci dessous pour comprendre comment bloquer de répondre à plusieurs questions en même temps:
     https://youtu.be/PBcqGxrr9g8?si=8IQ3Cwq4fSOYsfaA&t=1591 */
