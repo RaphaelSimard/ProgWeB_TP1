@@ -6,6 +6,7 @@ const rectangleDesDonnees = document.getElementById("zoneDeDonnees");
 const rectangle = document.createElement("div");
 rectangle.id = "rectangle";
 
+
 function creerBouton() {
     let bouton = creerBaliseX("button", "bouton", "Commencer le quiz", "");
     bouton.addEventListener("click", function () {
@@ -20,40 +21,18 @@ function constuireInterfaceIntro() {
     rectangle.appendChild(creerBaliseX("p", "p1", "JEU QUESTIONNAIRE :o"));
     rectangle.appendChild(creerBaliseX("p", "p2", "Je vous invite à participer à un petit jeu questionnaire qui comporte 5 questions choisies au hasard dans un ensemble de questions. "));
     rectangle.appendChild(creerBouton());
-
 }
 
 
+var i = 0;
+var correctCount = 0;
 
-
-function creationTableauQuestions(){
-    let questionsObjets = [];
-//Jpense qui faut faire quelque chose comme ça, au moins on a plus d'erreur "tab ass not defined" dans la console...
-// J'ai pas dis que ça fonctionne tho..
-    for (const questionsObjetsKey in questionsObjets) {
-        let question = new Question(
-            questionsObjets[questionsObjetsKey].question,
-            questionsObjets[questionsObjetsKey].reponses,
-            questionsObjets[questionsObjetsKey].bonneReponse,
-            questionsObjets[questionsObjetsKey].nbrePoints
-        );
-        questionsObjets.push(question);
-        rectangle.appendChild(creerBaliseX("p", "p1", question.question));
-        console.log(question.question );
+function creationTableauQuestions() {
+    for (const question of tabAssQuestions) {
+        console.log(question); // Use 'question' to access each question in the array
     }
-       /** let question = new Question(
-            lesQuestions.question,
-            lesQuestions.reponses,
-            lesQuestions.bonneReponse,
-            lesQuestions.nbrePoints
-        );
-<<<<<<< Updated upstream
-        questionsObjets.push(question);
-    }
-=======
-        questionsObjets.push(question); */
+//ON PEUT ENFIN ACCEDER AUX QUESTIONS!!!! LETS GOOOOOOOOOOOOOOO MASHALLAH
 
->>>>>>> Stashed changes
 }
 
 
@@ -63,33 +42,20 @@ function construireInterfaceQuestion() {
 
     rectangle.appendChild(creerBaliseX("h1", "titre", "Question 1"));
     creationTableauQuestions();
+
     //Bouton reprendre
     rectangle.appendChild(creerBaliseX("br"));
     rectangle.appendChild(creerBaliseX("br"));
     rectangle.appendChild(creerInput("button", "bouton", "", "Passez à la question suivante", ""));
     rectangle.appendChild(creerInput("button", "bouton", "", "Abandonner la question", ""));
     //afficher la premiere question
-    rectangle.appendChild(creerInput("p", "p1", questionsObjets[0].question));
-
+    //bruh ici c'est une zone de texte ??
+    rectangle.appendChild(creerInput("p", "p1", tabAssQuestions[0].question1, "", ""));
 
 
 }
 
-
-
-
 constuireInterfaceIntro(rectangleDesDonnees.appendChild(rectangle));
-
-
-
-//on fait un tableau ordonné qui contient les 15 questions qui sont contenues dans le JSON et on shuffle le tableau.
-// CRÉERAIS DES OBJETS À PARTIR DES QUESTION JSON PUIS ENSUITE TU LES MET DANS UN TABLEAU ORDONNÉ
-//Ensuite on choisi 5 questions au hasard dans le tableau et on les mets dans un autre tableau.
-//On fait un for qui va créer les 5 questions dans le rectangle des données.
-
-
-
-
 
 
 
