@@ -7,7 +7,7 @@
 
 let tabAssQuestions = [
     {
-        "question1": "Quelle méthode n'existe pas dans le DOM ?",
+        "question": "Quelle méthode n'existe pas dans le DOM ?",
         "reponses": {
             "optionA": "document.getElementsByBigMac",
             "optionB": "document.getElementsByClassName",
@@ -21,7 +21,7 @@ let tabAssQuestions = [
 
 
     {
-        "question2": "Quelle méthode JavaScript permet de supprimer un élément du DOM ?",
+        "question": "Quelle méthode JavaScript permet de supprimer un élément du DOM ?",
         "reponses": {
             "optionA": "removeChild() - A",
             "optionB": "disposeElement()",
@@ -34,7 +34,7 @@ let tabAssQuestions = [
 
 
     {
-        "question3": "Sur quelle structure de conception des objets Javascript est-il basé ?",
+        "question": "Sur quelle structure de conception des objets Javascript est-il basé ?",
         "reponses": {
             "optionA": "Object",
             "optionB": "Prototype - B",
@@ -47,7 +47,7 @@ let tabAssQuestions = [
     },
 
     {
-        "question4": "Comment pouvez-vous empêcher le comportement par défaut d'un lien hypertexte (par exemple, empêcher le chargement d'une nouvelle page) en JavaScript ?",
+        "question": "Comment pouvez-vous empêcher le comportement par défaut d'un lien hypertexte (par exemple, empêcher le chargement d'une nouvelle page) en JavaScript ?",
         "reponses": {
             "optionA": "event.cancelBubble()",
             "optionB": "event.stopPropagation()",
@@ -60,7 +60,7 @@ let tabAssQuestions = [
     },
 
     {
-        "question5": "Quelle est la bonne manière d'écrire un commentaire en JavaScript?",
+        "question": "Quelle est la bonne manière d'écrire un commentaire en JavaScript?",
         "reponses": {
             " optionA": "<!--- Ceci est un commentaire -->",
             "optionB": "{* Ceci est un commentaire *}",
@@ -73,7 +73,7 @@ let tabAssQuestions = [
     },
 
     {
-        "question6": "Quelle méthode JavaScript est utilisée pour supprimer le dernier élément d'un tableau ?",
+        "question": "Quelle méthode JavaScript est utilisée pour supprimer le dernier élément d'un tableau ?",
         "reponses": {
             "optionA": "push()",
             "optionB": "shift() - B",
@@ -86,7 +86,7 @@ let tabAssQuestions = [
     },
 
     {
-        "question7": "Comment pouvez-vous modifier le contenu HTML d'un élément en JavaScript ?",
+        "question": "Comment pouvez-vous modifier le contenu HTML d'un élément en JavaScript ?",
         "reponses": {
             "optionA": ".text",
             "optionB": ".value",
@@ -99,7 +99,7 @@ let tabAssQuestions = [
     },
 
     {
-        "question8": "Comment ajoutez-vous un événement de clic à un élément HTML en JavaScript ?",
+        "question": "Comment ajoutez-vous un événement de clic à un élément HTML en JavaScript ?",
         "reponses": {
             "optionA": "addEventListener('click', myFunction) - A",
             "optionB": "onclick = myFunction()",
@@ -112,7 +112,7 @@ let tabAssQuestions = [
     },
 
     {
-        "question9": "Comment faut-il déclarer une variable en JavaScript ?",
+        "question": "Comment faut-il déclarer une variable en JavaScript ?",
         "reponses": {
             "optionA": "int valeur = 1",
             "optionB": "varbus valeur = 1",
@@ -125,7 +125,7 @@ let tabAssQuestions = [
     },
 
     {
-        "question10": "Quel opérateur faut-il utiliser pour concaténer deux chaînes de caractères ?",
+        "question": "Quel opérateur faut-il utiliser pour concaténer deux chaînes de caractères ?",
         "reponses": {
             "optionA": "/",
             "optionB": "-",
@@ -138,7 +138,7 @@ let tabAssQuestions = [
     },
 
     {
-        "question11": "Quel est le rôle principal de JavaScript dans le développement web ",
+        "question": "Quel est le rôle principal de JavaScript dans le développement web ",
         "reponses": {
             "optionA": "Pouvoir mettre des gros boutons rouges partout sur les pages webs",
             "optionB": "Ajouter des fonctionnalités interactives aux pages web",
@@ -151,7 +151,7 @@ let tabAssQuestions = [
     },
 
     {
-        "question12": "Comment fait-on pour créer un tableau en JavaScript ?",
+        "question": "Comment fait-on pour créer un tableau en JavaScript ?",
         "reponses": {
             "optionA": "let tableau = new Array()",
             "optionB": "let tableau = {}",
@@ -164,7 +164,7 @@ let tabAssQuestions = [
     },
 
     {
-        "question13": "Quelle méthode JavaScript permet de faire une jointure entre 2 tableaux ?",
+        "question": "Quelle méthode JavaScript permet de faire une jointure entre 2 tableaux ?",
         "reponses": {
 
             "optionA": "tableau.join()",
@@ -177,7 +177,7 @@ let tabAssQuestions = [
     },
 
     {
-        "question14": " Quelle fonction JavaScript permet de sélectionner un élément unique à l'aide d'un sélecteur CSS ",
+        "question": " Quelle fonction JavaScript permet de sélectionner un élément unique à l'aide d'un sélecteur CSS ",
         "reponses": {
             "optionA": "querySelectorAll()",
             "optionB": "getElementbyId()",
@@ -190,7 +190,7 @@ let tabAssQuestions = [
     },
 
     {
-        "question15": "Comment écrit-on une conditionnelle en Javascript?",
+        "question": "Comment écrit-on une conditionnelle en Javascript?",
         "reponses": {
             "optionA": "if (i == 5){ } - A",
             "optionB": "if i == 5 then { },",

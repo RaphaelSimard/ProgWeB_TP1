@@ -13,7 +13,8 @@ let currentQuestionIndex = 0;
 function creerBouton() {
     let boutonDemarrage = creerBaliseX("button", "bouton", "Commencer le quiz", "");
     boutonDemarrage.addEventListener("click", function () {
-        construireInterfaceQuestion();});
+        construireInterfaceQuestion();
+    });
     return boutonDemarrage;
 }
 
@@ -25,6 +26,7 @@ function constuireInterfaceIntro() {
     rectangle.appendChild(creerBaliseX("p", "p1", "JEU QUESTIONNAIRE :o"));
     rectangle.appendChild(creerBaliseX("p", "p2", "Je vous invite à participer à un petit jeu questionnaire qui comporte 5 questions choisies au hasard dans un ensemble de questions. "));
     rectangle.appendChild(creerBouton());
+    creationTableauQuestions();
 }
 
 /**
@@ -32,61 +34,75 @@ function constuireInterfaceIntro() {
  * C'est important quon l'appelle qu'une seule fois, sinon ça va créer un tableau à chaque fois qu'on clique sur le bouton "Commencer le quiz"
  * Ne rien mettre d'autre que la création du tableau ici.
  */
-function creationTableauQuestions() {
-    let tableauDesQuestions;
-    for (const question of tabAssQuestions) {
-        question.push(tableauDesQuestions);
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
     }
+}
+
+function creationTableauQuestions() {
+    const tableauDesQuestions = []; // Create an empty array to store questions
+    for (const question of tabAssQuestions) {
+        tableauDesQuestions.push(question); // Push each question object into the new array
+    }
+    shuffleArray(tableauDesQuestions); // Shuffle the questions
     return tableauDesQuestions;
 }
+
+/**
+ ici met dans un tableau 5 questions au hasard (shuffle) pris dans le tableau des questions et le return
+ */
+function questionHasard(tableauDesQuestions) {
+    const tableauDeCinqQuestionRandom = tableauDesQuestions.slice(0, 5); // Get the first 5 questions from the shuffled array
+    console.log(tableauDeCinqQuestionRandom);
+    return tableauDeCinqQuestionRandom;
+}
+
 
 /**
  * Fonction qui s'occupe de créer l'interface des questions, les boutons, la question, les réponses, etc.
  * Va aussi s'occuper d'ajouter +1 à l'index de la question courante pour passer à la prochaine question.
  */
 function construireInterfaceQuestion() {
-    //vider le cadre de travail
     rectangle.innerHTML = "";
-    //OK ça on garde, c'est le titre de la question (index + 1), j'ai testé et ça fonctionne
     rectangle.appendChild(creerBaliseX("h1", "titre", `Question ${currentQuestionIndex + 1}`));
     rectangle.appendChild(creerBaliseX("br"));
     rectangle.appendChild(creerBaliseX("br"));
-    /*Ici il faudrait une nouvelle function AffichageQuestion() qui va afficher la question et les réponses qui sera appellée ici
-    Sinon la function de l'interface sera trop pleine
+
+    creationTableauQuestions();
+    affichageQuestion();
+
+    let boutonNextQuestion = rectangle.appendChild(creerInput("button", "bouton", "", "Passez à la question suivante", ""));
+    boutonNextQuestion.addEventListener("click", function () {
+        construireInterfaceQuestion();
+    });
+
+    let boutonAbandonner = rectangle.appendChild(creerInput("button", "bouton", "", "Abandonner la question", ""));
+    boutonAbandonner.addEventListener("click", function () {
+        construireInterfaceFinal();
+    });
+
+    currentQuestionIndex++;
+}
+
+
+function affichageQuestion() {
+    /*
+    Va aller chercher 5 des 15 question du tableau des questions, les shuffle
      */
-
-    //afficher la premiere question
-    //blablabla qui affiche la question
-
-    //afficher les réponses avec des boutons de type radio
-
     /*Faire un if qui va ajouter (nombreDePoints) au nombre de points si la réponse est bonne
     rappel pour moi même, aller voir la vidéo ci dessous pour comprendre comment bloquer de répondre à plusieurs questions en même temps:
     https://youtu.be/PBcqGxrr9g8?si=8IQ3Cwq4fSOYsfaA&t=1591 */
 
-
-    let boutonNextQuestion = rectangle.appendChild(creerInput("button", "bouton", "", "Passez à la question suivante", ""));
-    //ici faudrait que sur le click du bouton, ça appelle la fonction aFFICHAGE QUESTION
-    boutonNextQuestion.addEventListener("", function () {
-        construireInterfaceQuestion();
-    });
-
-
-
-
-
-    rectangle.appendChild(creerInput("button", "bouton", "", "Abandonner la question", ""));
-    //ici faudrait que sur le clic du bouton, ça appelle la fonction qui va créer l'interface final et compter le nombre de point accumulés
-
-
-
-    //bruh ici c'est une zone de texte ?? ça ne fonctionne pô.
-    //rectangle.appendChild(creerInput("p", "p1", tabAssQuestions[0].question1, "", ""));
-
-
-    currentQuestionIndex ++;
-
 }
+
+function construireInterfaceFinal() {
+    rectangle.innerHTML = "";
+    rectangle.appendChild(creerBaliseX("h1", "titre", "c'est fini"));
+    console.log("help");
+}
+
 
 // Appel des fonctions:
 constuireInterfaceIntro(rectangleDesDonnees.appendChild(rectangle));
