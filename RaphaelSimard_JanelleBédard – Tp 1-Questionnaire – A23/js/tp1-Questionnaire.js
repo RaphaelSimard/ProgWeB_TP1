@@ -29,17 +29,7 @@ function constuireInterfaceIntro() {
     creationTableauQuestions();
 }
 
-/**
- * Fonction qui s'occupe seulement de faire un tableau ordonné et d'y mettre les questions récupérées du JSON.
- * C'est important quon l'appelle qu'une seule fois, sinon ça va créer un tableau à chaque fois qu'on clique sur le bouton "Commencer le quiz"
- * Ne rien mettre d'autre que la création du tableau ici.
- */
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-}
+
 
 function creationTableauQuestions() {
     const tableauDesQuestions = []; // Create an empty array to store questions
