@@ -4,17 +4,17 @@
 const rectangleDesDonnees = document.getElementById("zoneDeDonnees");
 const rectangle = document.createElement("div");
 rectangle.id = "rectangle";
-
+let currentQuestionIndex = 0;
 
 /**
  * Function qui démarre le jeu lorsque l'utilisateur clique sur le bouton "Commencer le quiz"
  * @returns {*} un bouton ? pk faut-il le retourner ? update: il faut en effet le garder lol
  */
 function creerBouton() {
-    let bouton = creerBaliseX("button", "bouton", "Commencer le quiz", "");
-    bouton.addEventListener("click", function () {
+    let boutonDemarrage = creerBaliseX("button", "bouton", "Commencer le quiz", "");
+    boutonDemarrage.addEventListener("click", function () {
         construireInterfaceQuestion();});
-    return bouton;
+    return boutonDemarrage;
 }
 
 /**
@@ -26,8 +26,6 @@ function constuireInterfaceIntro() {
     rectangle.appendChild(creerBaliseX("p", "p2", "Je vous invite à participer à un petit jeu questionnaire qui comporte 5 questions choisies au hasard dans un ensemble de questions. "));
     rectangle.appendChild(creerBouton());
 }
-
-let currentQuestionIndex = 0;
 
 /**
  * Fonction qui s'occupe seulement de faire un tableau ordonné et d'y mettre les questions récupérées du JSON.
@@ -67,8 +65,16 @@ function construireInterfaceQuestion() {
     https://youtu.be/PBcqGxrr9g8?si=8IQ3Cwq4fSOYsfaA&t=1591 */
 
 
-    rectangle.appendChild(creerInput("button", "bouton", "", "Passez à la question suivante", ""));
-    //ici faudrait que sur le click du bouton, ça appelle la fonction creationTableauQuestions
+    let boutonNextQuestion = rectangle.appendChild(creerInput("button", "bouton", "", "Passez à la question suivante", ""));
+    //ici faudrait que sur le click du bouton, ça appelle la fonction aFFICHAGE QUESTION
+    boutonNextQuestion.addEventListener("", function () {
+        construireInterfaceQuestion();
+    });
+
+
+
+
+
     rectangle.appendChild(creerInput("button", "bouton", "", "Abandonner la question", ""));
     //ici faudrait que sur le clic du bouton, ça appelle la fonction qui va créer l'interface final et compter le nombre de point accumulés
 
