@@ -1,5 +1,4 @@
 "use strict"
-
 //Créations des variables et constantes et d'autres trucs randoms
 const rectangleDesDonnees = document.getElementById("zoneDeDonnees");
 const rectangle = document.createElement("div");
@@ -14,6 +13,9 @@ function creerBouton() {
     let boutonDemarrage = creerBaliseX("button", "bouton", "Commencer le quiz", "");
     boutonDemarrage.addEventListener("click", function () {
         construireInterfaceQuestion();
+        // ayayayaya
+        let questionsArray = JSONaObjectJS();
+            console.log(questionsArray[0].reponses[1]);
     });
     return boutonDemarrage;
 }
@@ -21,7 +23,7 @@ function creerBouton() {
 /**
  * Fonction qui crée l'interdface d'introduction du jeu.
  */
-function constuireInterfaceIntro() {
+function construireInterfaceIntro() {
     rectangle.appendChild(creerBaliseX("h1", "titre", "Bienvenue sur le quiz JavaScript de Janelle et Raphael"));
     rectangle.appendChild(creerBaliseX("p", "p1", "JEU QUESTIONNAIRE :o"));
     rectangle.appendChild(creerBaliseX("p", "p2", "Je vous invite à participer à un petit jeu questionnaire qui comporte 5 questions choisies au hasard dans un ensemble de questions. "));
@@ -63,7 +65,7 @@ function construireInterfaceQuestion() {
 
 
 function affichageQuestion() {
-    rectangle.appendChild(creerBaliseX("p", "question", tableauDe5Questions[currentQuestionIndex].question));
+    //rectangle.appendChild(creerBaliseX("p", "question", tableauDe5Questions[currentQuestionIndex].question));
     /*Faire un if qui va ajouter (nombreDePoints) au nombre de points si la réponse est bonne
     rappel pour moi même, aller voir la vidéo ci dessous pour comprendre comment bloquer de répondre à plusieurs questions en même temps:
     https://youtu.be/PBcqGxrr9g8?si=8IQ3Cwq4fSOYsfaA&t=1591 */
@@ -78,7 +80,7 @@ function construireInterfaceFinal() {
 
 
 // Appel des fonctions:
-constuireInterfaceIntro(rectangleDesDonnees.appendChild(rectangle));
+construireInterfaceIntro(rectangleDesDonnees.appendChild(rectangle));
 
 
 
