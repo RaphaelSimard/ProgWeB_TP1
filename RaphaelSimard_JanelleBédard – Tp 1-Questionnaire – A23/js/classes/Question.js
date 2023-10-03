@@ -65,10 +65,6 @@ function JSONaObjectJS(){
         tableauDesQuestions.push(new Question(question.question, question.reponses, question.bonneReponse, question.nbrePoints )); // Push each question object into the new array
     }
     shuffleArray(tableauDesQuestions);
-    const tableauDe5Questions = tableauDesQuestions.slice(0, 5);
-    return tableauDe5Questions;
-
-
-
+    return tableauDesQuestions.slice(0, 5);
 }
 

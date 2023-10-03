@@ -5,6 +5,9 @@ const rectangle = document.createElement("div");
 rectangle.id = "rectangle";
 let currentQuestionIndex = 0;
 
+
+let tableauQuestionnaireDesBonnesQuestionsPromisCestLeBon = JSONaObjectJS();
+
 /**
  * Function qui démarre le jeu lorsque l'utilisateur clique sur le bouton "Commencer le quiz"
  * @returns {*} un bouton ? pk faut-il le retourner ? update: il faut en effet le garder lol
@@ -13,9 +16,6 @@ function creerBouton() {
     let boutonDemarrage = creerBaliseX("button", "bouton", "Commencer le quiz", "");
     boutonDemarrage.addEventListener("click", function () {
         construireInterfaceQuestion();
-        // ayayayaya
-        let questionsArray = JSONaObjectJS();
-            console.log(questionsArray[0].reponses[1]);
     });
     return boutonDemarrage;
 }
@@ -28,14 +28,7 @@ function construireInterfaceIntro() {
     rectangle.appendChild(creerBaliseX("p", "p1", "JEU QUESTIONNAIRE :o"));
     rectangle.appendChild(creerBaliseX("p", "p2", "Je vous invite à participer à un petit jeu questionnaire qui comporte 5 questions choisies au hasard dans un ensemble de questions. "));
     rectangle.appendChild(creerBouton());
-
 }
-
-
-
-
-
-
 
 /**
  * Fonction qui s'occupe de créer l'interface des questions, les boutons, la question, les réponses, etc.
@@ -43,23 +36,37 @@ function construireInterfaceIntro() {
  */
 function construireInterfaceQuestion() {
     rectangle.innerHTML = "";
-    rectangle.appendChild(creerBaliseX("h1", "titre", `Question ${currentQuestionIndex + 1}`));
+    rectangle.appendChild(creerBaliseX("h1", "titre", "Question"+ currentQuestionIndex +1 + " de 5"));
     rectangle.appendChild(creerBaliseX("br"));
     rectangle.appendChild(creerBaliseX("br"));
+    JSONaObjectJS();
+    affichageQuestion(tableauQuestionnaireDesBonnesQuestionsPromisCestLeBon, currentQuestionIndex);
     boutonNextQuestion();
     boutonAbandonner();
     currentQuestionIndex++;
 }
 
+/* https://youtu.be/PBcqGxrr9g8?si=8IQ3Cwq4fSOYsfaA&t=1591 */
 
-function affichageQuestion() {
-    //rectangle.appendChild(creerBaliseX("p", "question", tableauDe5Questions[currentQuestionIndex].question));
-    /*Faire un if qui va ajouter (nombreDePoints) au nombre de points si la réponse est bonne
-    rappel pour moi même, aller voir la vidéo ci dessous pour comprendre comment bloquer de répondre à plusieurs questions en même temps:
-    https://youtu.be/PBcqGxrr9g8?si=8IQ3Cwq4fSOYsfaA&t=1591 */
 
+
+
+function affichageQuestion(questionsArray, currentQuestionIndex) {
+
+    // Get the current question from the tableauQuestionnaireDesBonnesQuestionsPromisCestLeBon based on the currentQuestionIndex
+    const currentQuestion = questionsArray[currentQuestionIndex];
+
+    // Update the HTML content of the 'rectangle' element with the current question
+    rectangle.innerHTML = "";
+    //rectangle.appendChild(creerBaliseX("h1", "titre", `Question ${currentQuestionIndex + 1}`));
+    rectangle.appendChild(creerBaliseX("p", "question", currentQuestion.question));
+
+    // You can also create elements for the answer choices and add them here
+    for (let i = 0; i < currentQuestion.reponses.length; i++) {
+        const answerElement = creerBaliseX("p", "reponse", currentQuestion.reponses[i]);
+        rectangle.appendChild(answerElement);
+    }
 }
-
 function construireInterfaceFinal() {
     rectangle.innerHTML = "";
     rectangle.appendChild(creerBaliseX("h1", "titre", "c'est fini"));
