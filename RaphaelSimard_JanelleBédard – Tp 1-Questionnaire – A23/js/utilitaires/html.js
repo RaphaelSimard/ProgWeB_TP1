@@ -158,5 +158,19 @@ function boutonNextQuestion() {
     });
 }
 
+function creerBouton() {
+    let boutonDemarrage = creerBaliseX("button", "bouton", "Commencer le quiz", "");
+    boutonDemarrage.addEventListener("click", function () {
+        construireInterfaceQuestion();
+    });
+    return boutonDemarrage;
+}
 
+function creerBoutonRejouer() {
+    let boutonRejouer = creerBaliseX("button", "bouton", "Rejouer", "");
+    boutonRejouer.addEventListener("click", function () {
+        construireInterfaceIntro();
+    });
+    return boutonRejouer;
+}
 

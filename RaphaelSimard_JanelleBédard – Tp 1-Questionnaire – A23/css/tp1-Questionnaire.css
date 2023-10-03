@@ -52,6 +52,26 @@ body{
     display: block;
 }
 
+#question {
+    margin: 16px 16px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    text-align: left;
+    color: #304e4e;
+    display: block;
+}
+
+#reponse {
+    margin: 16px 16px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    text-align: left;
+    color: #304e4e;
+    display: block;
+}
+
 #bouton {
     text-align: left;
     margin: 16px 16px;
