@@ -19,3 +19,8 @@
 
 - Lors de l'affichage des résultats, créer 2 varibales, une qui compte les points que nous accumulons, et une autre qui calcule le nombre de point au total qui sont disponible à gagner
 - Dans la classe quizQuestionnaire, faire un objet pour faire la paramétrisation
+
+
+TODO
+- dans classe quizQuestionnaire, faire objet pour créer des fonctions
+- faire le scores

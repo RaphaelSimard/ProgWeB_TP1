@@ -12,7 +12,14 @@ let tableauQuestionnaireDesBonnesQuestionsPromisCestLeBon = JSONaObjectJS();
  * Function qui démarre le jeu lorsque l'utilisateur clique sur le bouton "Commencer le quiz"
  * @returns {*} un bouton ? pk faut-il le retourner ? update: il faut en effet le garder lol
  */
-
+function JSONaObjectJS() {
+    let tableauDesQuestions = [];
+    for (const question of tabAssQuestions) {
+        tableauDesQuestions.push(new Question(question.question, question.reponses, question.bonneReponse, question.nbrePoints)); // Push each question object into the new array
+    }
+    shuffleArray(tableauDesQuestions);
+    return tableauDesQuestions.slice(0, 5);
+}
 
 /**
  * Fonction qui crée l'interdface d'introduction du jeu.
@@ -50,14 +57,14 @@ function construireInterfaceQuestion() {
 function affichageQuestion(questionTableau, indexCourrantDesQuestions) {
     const questionCourante = questionTableau[indexCourrantDesQuestions];
     rectangle.innerHTML = "";
-
-    rectangle.appendChild(creerBaliseX("h1", "p1", "Question "+ (indexCourrantDesQuestions + 1) + " de 5 pour " + questionCourante.nbrePoints));
+    rectangle.appendChild(creerBaliseX("h1", "p1", "Question "+ (indexCourrantDesQuestions + 1) + " de 5 pour " + questionCourante.nbrePoints + " points"));
     rectangle.appendChild(creerBaliseX("p", "p2", questionCourante.question));
     for (let i = 0; i < questionCourante.reponses.length; i++) {
         const choixDeReponse = creerBaliseX("p", "reponse", questionCourante.reponses[i]);
         rectangle.appendChild(choixDeReponse);
     }
     //TODO ICI APPELLER construireInterfaceFinal À LA FIN DE LA BOUCLE (i == 6)
+
 }
 function construireInterfaceFinal() {
     rectangle.innerHTML = "";
