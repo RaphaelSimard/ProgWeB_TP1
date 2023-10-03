@@ -31,7 +31,6 @@ function construireInterfaceIntro() {
  */
 function construireInterfaceQuestion() {
     rectangle.innerHTML = "";
-    rectangle.appendChild(creerBaliseX("h1", "titre", "Question"+ indexCourrantDesQuestions +1 + " de 5"));
     rectangle.appendChild(creerBaliseX("br"));
     rectangle.appendChild(creerBaliseX("br"));
     JSONaObjectJS();
@@ -44,29 +43,20 @@ function construireInterfaceQuestion() {
 /* https://youtu.be/PBcqGxrr9g8?si=8IQ3Cwq4fSOYsfaA&t=1591 */
 
 function affichageQuestion(questionTableau, indexCourrantDesQuestions) {
-    
     const questionCourante = questionTableau[indexCourrantDesQuestions];
-    
     rectangle.innerHTML = "";
-    
-    
+
+    rectangle.appendChild(creerBaliseX("h1", "titre", "Question "+ (indexCourrantDesQuestions + 1) + " de 5"));
     rectangle.appendChild(creerBaliseX("p", "question", questionCourante.question));
-    
     for (let i = 0; i < questionCourante.reponses.length; i++) {
-        const answerElement = creerBaliseX("p", "reponse", questionCourante.reponses[i]);
-        rectangle.appendChild(answerElement);
+        const choixDeReponse = creerBaliseX("p", "reponse", questionCourante.reponses[i]);
+        rectangle.appendChild(choixDeReponse);
     }
 }
 function construireInterfaceFinal() {
     rectangle.innerHTML = "";
     rectangle.appendChild(creerBaliseX("h1", "titre", "c'est fini"));
     console.log("help");
-    alert("Êtes-vous sûr de vouloir abandonner le quiz ?")
-    if (confirm("Êtes-vous sûr de vouloir abandonner le quiz ?")) {
-        rectangle.appendChild(construireInterfaceFinal());
-    } else {
-        construireInterfaceQuestion();
-    }
 }
 
 
