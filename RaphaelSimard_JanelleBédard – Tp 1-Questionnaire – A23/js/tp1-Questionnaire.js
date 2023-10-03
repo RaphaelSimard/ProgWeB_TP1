@@ -46,20 +46,8 @@ function construireInterfaceQuestion() {
     rectangle.appendChild(creerBaliseX("h1", "titre", `Question ${currentQuestionIndex + 1}`));
     rectangle.appendChild(creerBaliseX("br"));
     rectangle.appendChild(creerBaliseX("br"));
-
-
-    affichageQuestion();
-
-    let boutonNextQuestion = rectangle.appendChild(creerInput("button", "bouton", "", "Passez à la question suivante", ""));
-    boutonNextQuestion.addEventListener("click", function () {
-        construireInterfaceQuestion();
-    });
-
-    let boutonAbandonner = rectangle.appendChild(creerInput("button", "bouton", "", "Abandonner la question", ""));
-    boutonAbandonner.addEventListener("click", function () {
-        construireInterfaceFinal();
-    });
-
+    boutonNextQuestion();
+    boutonAbandonner();
     currentQuestionIndex++;
 }
 

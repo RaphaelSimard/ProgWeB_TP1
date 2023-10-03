@@ -143,3 +143,20 @@ function creerLabel(id, valFor = "", valeur = "", classe = "") {
     return labelTemp;
 }
 
+
+function boutonAbandonner() {
+    let boutonAbandonner = rectangle.appendChild(creerInput("button", "bouton", "", "Abandonner la question", ""));
+    boutonAbandonner.addEventListener("click", function () {
+        construireInterfaceFinal();
+    });
+}
+
+function boutonNextQuestion() {
+    let boutonNextQuestion = rectangle.appendChild(creerInput("button", "bouton", "", "Passez à la question suivante", ""));
+    boutonNextQuestion.addEventListener("click", function () {
+        construireInterfaceQuestion();
+    });
+}
+
+
+
