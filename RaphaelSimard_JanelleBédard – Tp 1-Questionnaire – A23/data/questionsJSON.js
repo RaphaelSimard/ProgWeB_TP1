@@ -37,7 +37,7 @@ let tabAssQuestions = [
 
         "bonneReponse": "document.getElementsByBigMac - A",
 
-        "nbrPoints": 2
+        "nbrePoints": 2
 
     },
 
@@ -133,7 +133,7 @@ let tabAssQuestions = [
 
         "bonneReponse": "// Ceci est un commentaire - C",
 
-        "nbrPoints": 1
+        "nbrePoints": 1
 
     },
 
@@ -159,7 +159,7 @@ let tabAssQuestions = [
 
         "bonneReponse": "shift() - B",
 
-        "nbrPoints": 3
+        "nbrePoints": 3
 
     },
 
@@ -192,7 +192,7 @@ let tabAssQuestions = [
 
     {
 
-        "question": "Cmment ajoutez-vous un événement de clic à un élément HTML en JavaScript ?",
+        "question": "Comment ajoutez-vous un événement de clic à un élément HTML en JavaScript ?",
 
         "reponses": [
 

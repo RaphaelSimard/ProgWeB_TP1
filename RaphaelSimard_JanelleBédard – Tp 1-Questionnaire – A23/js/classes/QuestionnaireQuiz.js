@@ -4,6 +4,7 @@
 //quand on clique sur jouer, faire un for in qui va créer les 5 questions dans le rectangle des données.
 
 class QuestionnaireQuiz {
+
 }
 
 
