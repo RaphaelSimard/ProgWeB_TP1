@@ -13,7 +13,7 @@ function boutonAbandonner() {
 //TODO TROUVER OÙ METTRE CETTE FONCTION DE VÉRIFICATION
 function verificationAbandon(){
     if (confirm("Êtes-vous sûr de vouloir abandonner le quiz ?")) {
-        rectangle.appendChild(construireInterfaceFinal());
+        rectangle.appendChild(construireInterfaceAbandon());
     }
 }
 

@@ -47,26 +47,6 @@ function construireInterfaceQuestion() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function affichageQuestion(questionTableau, indexCourrantDesQuestions) {
     const questionCourante = questionTableau[indexCourrantDesQuestions];
     rectangle.innerHTML = "";
@@ -77,11 +57,21 @@ function affichageQuestion(questionTableau, indexCourrantDesQuestions) {
         const choixDeReponse = creerBaliseX("p", "reponse", questionCourante.reponses[i]);
         rectangle.appendChild(choixDeReponse);
     }
+    //TODO ICI APPELLER construireInterfaceFinal À LA FIN DE LA BOUCLE (i == 6)
 }
 function construireInterfaceFinal() {
     rectangle.innerHTML = "";
     rectangle.appendChild(creerBaliseX("h1", "titre", "c'est fini"));
-    console.log("help");
+
+}
+
+function construireInterfaceAbandon(){
+    rectangle.innerHTML = "";
+    rectangle.appendChild(creerBaliseX("h1", "titre", "Tu...as.. abandonné..? "));
+    rectangle.appendChild(creerBaliseX("h1", "p2", "Bon.. Malgré tout, voici ton score: "));
+    //  TODO COMPTER LE SCORE
+
+
 }
 
 
