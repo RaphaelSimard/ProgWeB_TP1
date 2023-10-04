@@ -54,16 +54,21 @@ function construireInterfaceQuestion() {
 
 
 
-function affichageQuestion(questionTableau, indexCourrantDesQuestions) {
+function affichageQuestion(questionTableau, indexCourrantDesQuestions, tableau) {
     const questionCourante = questionTableau[indexCourrantDesQuestions];
     rectangle.innerHTML = "";
     rectangle.appendChild(creerBaliseX("h1", "p1", "Question "+ (indexCourrantDesQuestions + 1) + " de 5 pour " + questionCourante.nbrePoints + " points"));
     rectangle.appendChild(creerBaliseX("p", "p2", questionCourante.question));
     for (let i = 0; i < questionCourante.reponses.length; i++) {
         //let choixDeReponse = creerBaliseX("p", "reponse", questionCourante.reponses[i]);
-        let choixDeReponse = creerInput("radio", "reponse", questionCourante.reponses[i]);
+        //let choixDeReponse = creerTableau(questionCourante);
+        let choixDeReponse = creerBaliseX("input", "reponse", questionCourante.reponses[i]);
+        choixDeReponse.appendChild(creerInput("radio", "reponse"));
+
         rectangle.appendChild(choixDeReponse);
     }
+
+
     //TODO ICI APPELLER construireInterfaceFinal À LA FIN DE LA BOUCLE (i == 6)
 
 }
@@ -85,6 +90,22 @@ function construireInterfaceAbandon(){
 
 // Appel des fonctions:
 construireInterfaceIntro(rectangleDesDonnees.appendChild(rectangle));
+
+/*function creerLigne() {
+    let ligne = document.createElement("p");
+    ligne.appendChild(creerInput("radio", "reponse"));
+    ligne.appendChild(creerLabel("reponse", "reponse"));
+    return ligne;
+}
+
+function creerTableau(questionCourante) {
+    let tableau = document.createElement("ul");
+    for (let i = 0; i < questionCourante.reponses.length ; i++) {
+        tableau.appendChild(creerLigne(questionCourante.reponses[i]));
+    }
+    return tableau;
+}*/
+
 
 
 
