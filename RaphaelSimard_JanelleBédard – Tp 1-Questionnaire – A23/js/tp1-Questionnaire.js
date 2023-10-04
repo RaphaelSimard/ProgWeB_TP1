@@ -60,7 +60,8 @@ function affichageQuestion(questionTableau, indexCourrantDesQuestions) {
     rectangle.appendChild(creerBaliseX("h1", "p1", "Question "+ (indexCourrantDesQuestions + 1) + " de 5 pour " + questionCourante.nbrePoints + " points"));
     rectangle.appendChild(creerBaliseX("p", "p2", questionCourante.question));
     for (let i = 0; i < questionCourante.reponses.length; i++) {
-        const choixDeReponse = creerBaliseX("p", "reponse", questionCourante.reponses[i]);
+        //let choixDeReponse = creerBaliseX("p", "reponse", questionCourante.reponses[i]);
+        let choixDeReponse = creerInput("radio", "reponse", questionCourante.reponses[i]);
         rectangle.appendChild(choixDeReponse);
     }
     //TODO ICI APPELLER construireInterfaceFinal À LA FIN DE LA BOUCLE (i == 6)
