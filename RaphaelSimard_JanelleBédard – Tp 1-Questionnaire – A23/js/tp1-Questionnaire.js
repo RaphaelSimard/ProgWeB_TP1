@@ -60,10 +60,10 @@ function affichageQuestion(questionTableau, indexCourrantDesQuestions, tableau) 
     rectangle.appendChild(creerBaliseX("h1", "p1", "Question "+ (indexCourrantDesQuestions + 1) + " de 5 pour " + questionCourante.nbrePoints + " points"));
     rectangle.appendChild(creerBaliseX("p", "p2", questionCourante.question));
     for (let i = 0; i < questionCourante.reponses.length; i++) {
-        //let choixDeReponse = creerBaliseX("p", "reponse", questionCourante.reponses[i]);
-        //let choixDeReponse = creerTableau(questionCourante);
-        let choixDeReponse = creerBaliseX("input", "reponse", questionCourante.reponses[i]);
-        choixDeReponse.appendChild(creerInput("radio", "reponse"));
+
+
+        let choixDeReponse = creerBaliseX("p", "choix");
+        choixDeReponse.appendChild(creerLigneReponse(questionCourante.reponses[i], i + 1));
 
         rectangle.appendChild(choixDeReponse);
     }
@@ -71,6 +71,14 @@ function affichageQuestion(questionTableau, indexCourrantDesQuestions, tableau) 
 
     //TODO ICI APPELLER construireInterfaceFinal À LA FIN DE LA BOUCLE (i == 6)
 
+}
+
+
+function creerLigneReponse(reponse, index) {
+    let ligneReponse = document.createElement("p");
+    ligneReponse.appendChild(creerInput("radio", "reponse" + index, "reponse", reponse));
+    ligneReponse.appendChild(creerLabel("pRep", "reponse" + index, reponse));
+    return ligneReponse;
 }
 function construireInterfaceFinal() {
     rectangle.innerHTML = "";
@@ -91,22 +99,11 @@ function construireInterfaceAbandon(){
 // Appel des fonctions:
 construireInterfaceIntro(rectangleDesDonnees.appendChild(rectangle));
 
-/*function creerLigne() {
-    let ligne = document.createElement("p");
-    ligne.appendChild(creerInput("radio", "reponse"));
-    ligne.appendChild(creerLabel("reponse", "reponse"));
-    return ligne;
-}
 
-function creerTableau(questionCourante) {
-    let tableau = document.createElement("ul");
-    for (let i = 0; i < questionCourante.reponses.length ; i++) {
-        tableau.appendChild(creerLigne(questionCourante.reponses[i]));
-    }
-    return tableau;
-}*/
-
-
+//let choixDeReponse = creerBaliseX("p", "reponse", questionCourante.reponses[i]);
+//let choixDeReponse = creerTableau(questionCourante);
+// let choixDeReponse = creerLabel("input", "reponse", questionCourante.reponses[i]);
+// choixDeReponse.appendChild(creerInput("radio", "reponse"));
 
 
 
