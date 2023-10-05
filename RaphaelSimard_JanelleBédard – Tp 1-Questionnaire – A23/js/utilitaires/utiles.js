@@ -25,4 +25,10 @@ function JSONaObjectJS() {
     return tableauDesQuestions.slice(0, 5);
 }
 
+/**
+ * à déplacer
+ */
+function msgSelonScore(){
+    
+}
 

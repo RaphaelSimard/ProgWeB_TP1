@@ -5,7 +5,7 @@ const rectangle = document.createElement("div");
 rectangle.id = "rectangle";
 
 //TODO trouver un moyen de ne pas utiliser de variable globale pour l'index de la question courante
-let indexCourrantQuestion = 0;
+let indexCourrantQuestion = -1;
 
 
 //let tableauQuestionnaireDesBonnesQuestionsPromisCestLeBon = JSONaObjectJS();
@@ -16,9 +16,9 @@ const unObjetQuestions = unObjetQuestionnaireQuiz.questions[indexCourrantQuestio
 
 function construireInterfaceIntro() {
     rectangle.innerHTML = "";
-    rectangle.appendChild(creerBaliseX("h1", "titre", "Bienvenue sur le quiz JavaScript de Janelle et Raphael"));
-    rectangle.appendChild(creerBaliseX("p", "p1", "JEU QUESTIONNAIRE :o"));
-    rectangle.appendChild(creerBaliseX("p", "p2", "Je vous invite à participer à un petit jeu questionnaire qui comporte 5 questions choisies au hasard dans un ensemble de questions. "));
+    rectangle.appendChild(creerBaliseX("h1", "titre", "Bienvenue sur le quiz JavaScript de Janelle et Raphaël"));
+    rectangle.appendChild(creerBaliseX("p", "p1", "Jeu Questionnaire "));
+    rectangle.appendChild(creerBaliseX("p", "p2", "Nous vous invitons à participer à un petit jeu questionnaire qui comporte 5 questions choisies au hasard dans un ensemble de questions. Chaque question vous donneras un certain nombre de points. À la fin du quiz, vous obtiendrez votre résultat final. Bonne chance! ! 🥰 "));
     rectangle.appendChild(creerBouton());
 }
 
@@ -28,6 +28,7 @@ function construireInterfaceIntro() {
  */
 function construireInterfaceQuestion() {
     indexCourrantQuestion++;
+
     if (indexCourrantQuestion < unObjetQuestionnaireQuiz.questions.length) {
         rectangle.innerHTML = "";
         rectangle.appendChild(creerBaliseX("br"));
@@ -67,13 +68,16 @@ function creerLigneReponse(reponse, index) {
 
 function construireInterfaceFinal() {
     rectangle.innerHTML = "";
-    rectangle.appendChild(creerBaliseX("h1", "titre", "c'est fini"));
+    rectangle.appendChild(creerBaliseX("h1", "titre", "Voici votre résultat final: "));
+    rectangle.appendChild(creerBaliseX("p", "p2", "Vous avez une note de --mettre la note--. C'est -ici mettre message selon le score-"));
+    creerBoutonRejouer();
+
 }
 
 function construireInterfaceAbandon() {
     rectangle.innerHTML = "";
     rectangle.appendChild(creerBaliseX("h1", "titre", "Tu...as.. abandonné..? "));
-    rectangle.appendChild(creerBaliseX("h1", "p2", "Bon.. Malgré tout, voici ton score: "));
+    rectangle.appendChild(creerBaliseX("p", "p2", "Bon.. Malgré tout, voici ton score: "));
     //  TODO Apeller la fonction qui va compter le score (elle est dans questionnaireQuiz.js)
 }
 
@@ -82,17 +86,16 @@ function construireInterfaceAbandon() {
 construireInterfaceIntro(rectangleDesDonnees.appendChild(rectangle));
 
 
+//TODO EFFACER ÇA ??
 //let choixDeReponse = creerBaliseX("p", "reponse", questionCourante.reponses[i]);
 //let choixDeReponse = creerTableau(questionCourante);
 // let choixDeReponse = creerLabel("input", "reponse", questionCourante.reponses[i]);
 // choixDeReponse.appendChild(creerInput("radio", "reponse"));
 
 
-/**
- *Bouton pour abandonner le quiz
- * Techniquement la partie qui fait la vérification si on veut vraiment abandonner le quiz est dans une autre fonction.
- * On devrait mettre ca dans quel fichier ?
- */
+
+/**------------------TOUT LES BOUTONS, VA SAVOIR OÙ ILS VONT FINIR------------------*/
+
 function boutonAbandonner() {
     let boutonAbandonner = rectangle.appendChild(creerInput("button", "bouton", "", "Abandonner le quiz", ""));
     boutonAbandonner.addEventListener("click", function () {
@@ -116,10 +119,15 @@ function creerBouton() {
 }
 
 function creerBoutonRejouer() {
-    let boutonRejouer = creerBaliseX("button", "bouton", "Rejouer", "");
+    let boutonRejouer = rectangle.appendChild(creerInput("button", "bouton", "", "Rejouer !", ""));
     boutonRejouer.addEventListener("click", function () {
+
+        //à comprendre parce que voila tu testeras....
+        indexCourrantQuestion = -1;
+
         construireInterfaceIntro();
+        //TODO REMETTRE LE SCORE À 0 ? index à 0 ?
     });
-    return boutonRejouer;
+
 }
 

@@ -161,7 +161,7 @@ let tabAssQuestions = [
 
 
     {
-        "question": "Quel est le rôle principal de JavaScript dans le développement web ",
+        "question": "Quel est le rôle principal de JavaScript dans le développement web ? ",
         "reponses": [
             "Pouvoir mettre des gros boutons rouges partout sur les pages webs",
             "Ajouter des fonctionnalités interactives aux pages web",
@@ -202,7 +202,7 @@ let tabAssQuestions = [
     },
     {
 
-        "question": " Quelle fonction JavaScript permet de sélectionner un élément unique à l'aide d'un sélecteur CSS ",
+        "question": " Quelle fonction JavaScript permet de sélectionner un élément unique à l'aide d'un sélecteur CSS  ?",
         "reponses": [
             "querySelectorAll()",
             "getElementbyId()",
@@ -216,7 +216,7 @@ let tabAssQuestions = [
 
 
     {
-        "question": "Comment écrit-on une conditionnelle en Javascript?",
+        "question": "Comment écrit-on une conditionnelle en Javascript ?",
         "reponses": [
             "if (i == 5){ } - A",
             "if i == 5 then { },",
