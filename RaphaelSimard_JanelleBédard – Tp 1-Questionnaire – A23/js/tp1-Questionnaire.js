@@ -4,15 +4,10 @@ const rectangleDesDonnees = document.getElementById("zoneDeDonnees");
 const rectangle = document.createElement("div");
 rectangle.id = "rectangle";
 let indexCourrantDesQuestions = 0;
+//let tableauQuestionnaireDesBonnesQuestionsPromisCestLeBon = JSONaObjectJS();
+const leBONquestionnaire = new QuestionnaireQuiz();
+const laBONNEquestion = leBONquestionnaire.questions[indexCourrantDesQuestions];
 
-
-let tableauQuestionnaireDesBonnesQuestionsPromisCestLeBon = JSONaObjectJS();
-
-
-
-/**
- * Fonction qui crée l'interdface d'introduction du jeu.
- */
 function construireInterfaceIntro() {
     rectangle.innerHTML = "";
     rectangle.appendChild(creerBaliseX("h1", "titre", "Bienvenue sur le quiz JavaScript de Janelle et Raphael"));
@@ -26,36 +21,36 @@ function construireInterfaceIntro() {
  * Va aussi s'occuper d'ajouter +1 à l'index de la question courante pour passer à la prochaine question.
  */
 function construireInterfaceQuestion() {
-    rectangle.innerHTML = "";
-    rectangle.appendChild(creerBaliseX("br"));
-    rectangle.appendChild(creerBaliseX("br"));
-    JSONaObjectJS();
-    affichageQuestion(tableauQuestionnaireDesBonnesQuestionsPromisCestLeBon, indexCourrantDesQuestions);
-    boutonNextQuestion();
-    boutonAbandonner();
     indexCourrantDesQuestions++;
+    if (indexCourrantDesQuestions < leBONquestionnaire.questions.length) {
+        rectangle.innerHTML = "";
+        rectangle.appendChild(creerBaliseX("br"));
+        rectangle.appendChild(creerBaliseX("br"));
+        const laBONNEquestion = leBONquestionnaire.questions[indexCourrantDesQuestions];
+        affichageQuestion(laBONNEquestion, leBONquestionnaire);
+        boutonNextQuestion();
+        boutonAbandonner();
+    } else {
+        construireInterfaceFinal();
+    }
 }
 
-/* https://youtu.be/PBcqGxrr9g8?si=8IQ3Cwq4fSOYsfaA&t=1591 */
 
-
-function affichageQuestion(questionTableau, indexCourrantDesQuestions, tableau) {
-    const questionCourante = questionTableau[indexCourrantDesQuestions];
+function affichageQuestion(questionObj, questionnaireObj) {
+    const questionCourante = questionObj;
     rectangle.innerHTML = "";
-    rectangle.appendChild(creerBaliseX("h1", "p1", "Question "+ (indexCourrantDesQuestions + 1) + " de 5 pour " + questionCourante.nbrePoints + " points"));
-    rectangle.appendChild(creerBaliseX("p", "p2", questionCourante.question));
-    for (let i = 0; i < questionCourante.reponses.length; i++) {
-        let choixDeReponse = creerBaliseX("p", "choix");
-        choixDeReponse.appendChild(creerLigneReponse(questionCourante.reponses[i], i + 1));
+    const nbrePoints = questionCourante.nbrePoints;
+    const questionText = questionCourante.question;
+    const reponses = questionCourante.reponses;
 
+    rectangle.appendChild(creerBaliseX("h1", "p1", "Question " + (indexCourrantDesQuestions + 1) + " de 5 pour " + nbrePoints + " points"));
+    rectangle.appendChild(creerBaliseX("p", "p2", questionText));
+    for (let i = 0; i < reponses.length; i++) {
+        let choixDeReponse = creerBaliseX("p", "choix");
+        choixDeReponse.appendChild(creerLigneReponse(reponses[i], i + 1));
         rectangle.appendChild(choixDeReponse);
     }
-
-
-    //TODO ICI APPELLER construireInterfaceFinal À LA FIN DE LA BOUCLE (i == 6)
-
 }
-
 
 function creerLigneReponse(reponse, index) {
     let ligneReponse = document.createElement("p");
@@ -63,19 +58,17 @@ function creerLigneReponse(reponse, index) {
     ligneReponse.appendChild(creerLabel("pRep", "reponse" + index, reponse));
     return ligneReponse;
 }
+
 function construireInterfaceFinal() {
     rectangle.innerHTML = "";
     rectangle.appendChild(creerBaliseX("h1", "titre", "c'est fini"));
-
 }
 
-function construireInterfaceAbandon(){
+function construireInterfaceAbandon() {
     rectangle.innerHTML = "";
     rectangle.appendChild(creerBaliseX("h1", "titre", "Tu...as.. abandonné..? "));
     rectangle.appendChild(creerBaliseX("h1", "p2", "Bon.. Malgré tout, voici ton score: "));
-    //  TODO COMPTER LE SCORE
-
-
+    //  TODO Apeller la fonction qui va compter le score (elle est dans questionnaireQuiz.js)
 }
 
 
@@ -89,4 +82,38 @@ construireInterfaceIntro(rectangleDesDonnees.appendChild(rectangle));
 // choixDeReponse.appendChild(creerInput("radio", "reponse"));
 
 
+/**
+ *Bouton pour abandonner le quiz
+ * Techniquement la partie qui fait la vérification si on veut vraiment abandonner le quiz est dans une autre fonction.
+ * On devrait mettre ca dans quel fichier ?
+ */
+function boutonAbandonner() {
+    let boutonAbandonner = rectangle.appendChild(creerInput("button", "bouton", "", "Abandonner le quiz", ""));
+    boutonAbandonner.addEventListener("click", function () {
+        construireInterfaceAbandon();
+    });
+}
+
+function boutonNextQuestion() {
+    let boutonNextQuestion = rectangle.appendChild(creerInput("button", "bouton", "", "Passez à la question suivante", ""));
+    boutonNextQuestion.addEventListener("click", function () {
+        construireInterfaceQuestion();
+    });
+}
+
+function creerBouton() {
+    let boutonDemarrage = creerBaliseX("button", "bouton", "Commencer le quiz", "");
+    boutonDemarrage.addEventListener("click", function () {
+        construireInterfaceQuestion();
+    });
+    return boutonDemarrage;
+}
+
+function creerBoutonRejouer() {
+    let boutonRejouer = creerBaliseX("button", "bouton", "Rejouer", "");
+    boutonRejouer.addEventListener("click", function () {
+        construireInterfaceIntro();
+    });
+    return boutonRejouer;
+}
 

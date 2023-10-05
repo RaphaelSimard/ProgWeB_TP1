@@ -9,7 +9,7 @@ class QuestionnaireQuiz {
 
 //Ici mettre le constructeur
     constructor() {
-        this._questions = JSONaObjectJS(tabAssQuestions);
+        this._questions = JSONaObjectJS();
     }
 
 
