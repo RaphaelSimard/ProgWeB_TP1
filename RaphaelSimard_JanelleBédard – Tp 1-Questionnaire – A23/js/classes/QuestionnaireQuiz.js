@@ -9,7 +9,7 @@ class QuestionnaireQuiz {
 
 //Ici mettre le constructeur
     constructor() {
-        this._questions = JSONaObjectJS(tableauQuestionnaireDesBonnesQuestionsPromisCestLeBon);
+        this._questions = JSONaObjectJS(tabAssQuestions);
     }
 
 
@@ -20,6 +20,9 @@ class QuestionnaireQuiz {
     set questions(value) {
         this._questions = value;
     }
+
+    // calculer les points
+
 }
 
 
