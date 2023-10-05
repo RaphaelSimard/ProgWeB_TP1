@@ -28,7 +28,22 @@ function JSONaObjectJS() {
 /**
  * à déplacer
  */
-function msgSelonScore(){
-    
+function msgSelonScore(score){
+    let laStringDeTexte = "";
+    if (score > 0 && score < 30){
+        laStringDeTexte = "vous êtes vraiment nul ! Il va falloir réviser encore...";
+    } else if ( score >= 30 && score < 60){
+        laStringDeTexte = "Vous auriez quand même pu faire mieux... Aller hop, on révise !";
+    } else if (score >= 60 && score < 70){
+        laStringDeTexte = "Vous êtes dans la moyenne! Vous pouvez certainement vous améliorer!";
+    } else if (score >= 70 && score < 85){
+        laStringDeTexte = "Vous êtes bon, mais vous pouvez faire encore mieux !";
+    } else if (score >= 85 && score < 95){
+        laStringDeTexte = "Vous êtes très bon! Bravo !";
+    } else if (score >= 95 && score <= 100){
+        laStringDeTexte = "Vous êtes excellent ! C'est presque parfait!";
+    } else if (score == 100){
+        laStringDeTexte = "Vous êtes parfait ! C'est sans fautes !";
+    }
 }
 
