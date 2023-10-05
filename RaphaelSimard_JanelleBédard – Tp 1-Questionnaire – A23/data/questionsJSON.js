@@ -138,6 +138,8 @@ let tabAssQuestions = [
     },
 
 
+
+
     {
 
         "question": "Quelle méthode JavaScript est utilisée pour supprimer le dernier élément d'un tableau ?",
@@ -178,7 +180,7 @@ let tabAssQuestions = [
 
             ".innerHTML - D",
 
-            ".innerDelteSystem32",
+            ".innerDeleteSystem32",
 
 
         ],

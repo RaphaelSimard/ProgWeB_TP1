@@ -50,10 +50,6 @@ function construireInterfaceQuestion() {
 /* https://youtu.be/PBcqGxrr9g8?si=8IQ3Cwq4fSOYsfaA&t=1591 */
 
 
-
-
-
-
 function affichageQuestion(questionTableau, indexCourrantDesQuestions, tableau) {
     const questionCourante = questionTableau[indexCourrantDesQuestions];
     rectangle.innerHTML = "";
