@@ -56,8 +56,6 @@ function affichageQuestion(questionTableau, indexCourrantDesQuestions, tableau) 
     rectangle.appendChild(creerBaliseX("h1", "p1", "Question "+ (indexCourrantDesQuestions + 1) + " de 5 pour " + questionCourante.nbrePoints + " points"));
     rectangle.appendChild(creerBaliseX("p", "p2", questionCourante.question));
     for (let i = 0; i < questionCourante.reponses.length; i++) {
-
-
         let choixDeReponse = creerBaliseX("p", "choix");
         choixDeReponse.appendChild(creerLigneReponse(questionCourante.reponses[i], i + 1));
 

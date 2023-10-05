@@ -24,3 +24,16 @@
 TODO
 - dans classe quizQuestionnaire, faire objet pour créer des fonctions
 - faire le scores
+
+
+- EXAMEN PRATIQUE (ON VA MOURIR) :
+apprendre les creates html pour exam
+évenement de faire un create interface et gerer évenement
+
+
+- pas obligatoire, mais on peut faire l'exemple pour renforcer nos notions OU refaire le formatif 5
+
+
+EXAM THÉORIQUE (ENCORE PLUS MOURIR :O MASH'ALLAH):
+Demander la bibliotheque des thread de j unit
+Demander les fonctions des threads
