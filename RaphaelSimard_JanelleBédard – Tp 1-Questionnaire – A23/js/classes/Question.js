@@ -44,3 +44,8 @@ class Question {
     }
 }
 
+//Verif si la reponse est bonne ici
+function verifierReponse(reponse, bonneReponse) {
+
+}
+

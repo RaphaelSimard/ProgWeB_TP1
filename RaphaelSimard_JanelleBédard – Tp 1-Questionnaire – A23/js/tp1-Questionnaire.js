@@ -8,18 +8,7 @@ let indexCourrantDesQuestions = 0;
 
 let tableauQuestionnaireDesBonnesQuestionsPromisCestLeBon = JSONaObjectJS();
 
-/**
- * Function qui démarre le jeu lorsque l'utilisateur clique sur le bouton "Commencer le quiz"
- * @returns {*} un bouton ? pk faut-il le retourner ? update: il faut en effet le garder lol
- */
-function JSONaObjectJS() {
-    let tableauDesQuestions = [];
-    for (const question of tabAssQuestions) {
-        tableauDesQuestions.push(new Question(question.question, question.reponses, question.bonneReponse, question.nbrePoints)); // Push each question object into the new array
-    }
-    shuffleArray(tableauDesQuestions);
-    return tableauDesQuestions.slice(0, 5);
-}
+
 
 /**
  * Fonction qui crée l'interdface d'introduction du jeu.
