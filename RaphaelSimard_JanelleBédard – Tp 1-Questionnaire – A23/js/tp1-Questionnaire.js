@@ -49,7 +49,8 @@ function affichageQuestion(questionObj, questionnaireObj) {
     const nbrePoints = questionCourante.nbrePoints;
     const questionText = questionCourante.question;
     const reponses = questionCourante.reponses;
-
+    //I'll let you find out how to repair this shit. Not my problem anymore, i've tried (barely).
+    rectangle.appendChild(creerFieldset("fieldset", "Questionnaire"));
     rectangle.appendChild(creerBaliseX("h1", "p1", "Question " + (indexCourrantQuestion + 1) + " de 5 pour " + nbrePoints + " points"));
     rectangle.appendChild(creerBaliseX("p", "p2", questionText));
     for (let i = 0; i < reponses.length; i++) {
@@ -68,7 +69,7 @@ function creerLigneReponse(reponse, index) {
 
 function construireInterfaceFinal() {
     rectangle.innerHTML = "";
-    rectangle.appendChild(creerBaliseX("h1", "titre", "Voici votre résultat final: "));
+    rectangle.appendChild(creerBaliseX("h1", "p1", "Voici votre résultat final: "));
     rectangle.appendChild(creerBaliseX("p", "p2", "Vous avez une note de --mettre la note--. C'est -ici mettre message selon le score-"));
     creerBoutonRejouer();
 
@@ -76,9 +77,11 @@ function construireInterfaceFinal() {
 
 function construireInterfaceAbandon() {
     rectangle.innerHTML = "";
-    rectangle.appendChild(creerBaliseX("h1", "titre", "Tu...as.. abandonné..? "));
-    rectangle.appendChild(creerBaliseX("p", "p2", "Bon.. Malgré tout, voici ton score: "));
+    rectangle.appendChild(creerBaliseX("h1", "p1", "Tu...as.. abandonné..? Voici quand même ton résultat: "));
+    rectangle.appendChild(creerBaliseX("p", "p2", "Tu as eu un score de --mettre la note--. C'est -ici mettre message selon le score- "));
     //  TODO Apeller la fonction qui va compter le score (elle est dans questionnaireQuiz.js)
+    creerBoutonRejouer();
+
 }
 
 

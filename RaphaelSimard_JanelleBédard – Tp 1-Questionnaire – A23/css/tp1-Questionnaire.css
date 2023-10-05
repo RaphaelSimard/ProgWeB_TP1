@@ -1,6 +1,6 @@
 /* Mettre tous vos styles ici */
 
-body{
+body {
     background-image: url("https://www.wallpaperuse.com/wallp/86-861923_m.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,15 +9,13 @@ body{
 }
 
 
-
 #rectangle {
-
     flex: auto;
     padding: 12px;
     background-color: rgb(253, 226, 195);
     border: 3px solid #47a1a4;
     text-align: left;
-    border-radius: 16px ;
+    border-radius: 16px;
     margin: 60px 120px;
     opacity: 100%;
 
@@ -33,7 +31,7 @@ body{
 
 #p1 {
     margin: 10px;
-    font-size: 20px;
+    font-size: 28px;
     text-align: left;
     color: #6394ea;
     font-weight: bold;
@@ -43,11 +41,12 @@ body{
 
 #p2 {
     margin: 24px 25% 24px 16px;
-    font-size: 18px;
+    font-size: 22px;
     text-align: justify;
-    color: #304e4e;
+    color: #142744;
     font-weight: bold;
-    font-family: Consolas, monaco, monospace;
+    letter-spacing: 1px;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     display: block;
 }
 
@@ -62,7 +61,7 @@ body{
 
 #question {
     margin: 16px 16px;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     text-align: left;
@@ -103,24 +102,44 @@ body{
 
 #pMauvaiseRéponse {
     color: red;
-    font-size: 16px;
+    margin: 16px 16px;
+    font-size: 20px;
     font-weight: bold;
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    text-align: left;
+    display: block;
     text-decoration: line-through;
 
 }
 
 #pBonneRéponse {
     color: green;
-    font-size: 16px;
+    margin: 16px 16px;
+    font-size: 20px;
     font-weight: bold;
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    text-align: left;
+    display: block;
 }
 
 #pLaBonneRéponseQuiAPasÉtéDonné {
     color: blue;
-    font-size: 16px;
+    margin: 16px 16px;
+    font-size: 20px;
     font-weight: bold;
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    text-align: left;
+    display: block;
+
 }
 
+
+#fieldset {
+    margin: 10px;
+    font-size: 14px;
+    text-align: left;
+    color: #6394ea;
+    font-weight: bold;
+    display: block;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}

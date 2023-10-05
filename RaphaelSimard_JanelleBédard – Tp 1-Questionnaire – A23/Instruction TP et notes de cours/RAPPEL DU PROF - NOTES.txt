@@ -2,12 +2,12 @@
 
 1ERE RENCONTRE AVEC PROF:
 
-- Mettre la réponse directement au cas si on change l'odre des options
+- Mettre la réponse directement au cas si on change l'odre des options ✅
 - FAIRE UN 5EME CHOIX DE QUESTION ✅
 - Mettre un " - B " pour se rappeller de la bonne réponse ✅
 - Hauteur du rectangle fixe à réparer ✅
 - Changer HTML pour que ce soit plus structuré, avec objects ✅
-- field set pour écrire sur la bordure avec une légende en HTML
+- field set pour écrire sur la bordure avec une légende en HTML‼️‼️
 - prendre utilitaire du prof comme librairie ✅🥺
 - fonction d'affichage qui construit l'interface et fonction de gestion qui controle (voir formatif prof) ✅
 - faire un constructeur, les mettre dans un tableau ordonné et mnt plus besoin du json, on shuffle dans le nouveau tableaux des 15 questions. ✅
@@ -18,15 +18,16 @@
 2EME RENCONTRE AVEC PROF:
 
 - Lors de l'affichage des résultats, créer 2 varibales, une qui compte les points que nous accumulons, et une autre qui calcule le nombre de point au total qui sont disponible à gagner
-- Dans la classe quizQuestionnaire, faire un objet pour faire la paramétrisation
+- Dans la classe quizQuestionnaire, faire un objet pour faire la paramétrisation ✅
 
 
 TODO
-- dans classe quizQuestionnaire, faire objet pour créer des fonctions
-- faire le scores
+- dans classe quizQuestionnaire, faire objet pour créer des fonctions ✅
+- faire le scores ‼️‼️
+- Mettre le fieldset partout ???
 
 
-- EXAMEN PRATIQUE (ON VA MOURIR) :
+- EXAMEN PRATIQUE (ON VA MOURIR) : (je suis d'accord avec cette affirmation)
 apprendre les creates html pour exam
 évenement de faire un create interface et gerer évenement
 
@@ -34,6 +35,7 @@ apprendre les creates html pour exam
 - pas obligatoire, mais on peut faire l'exemple pour renforcer nos notions OU refaire le formatif 5
 
 
+
 EXAM THÉORIQUE (ENCORE PLUS MOURIR :O MASH'ALLAH):
-Demander la bibliotheque des thread de j unit
+Demander la bibliotheque des thread de j unit  ❓<--- Koi ? Le prof veut juste qu'on sache que Junit est la classe avec laquelle on fait des test unitaires.
 Demander les fonctions des threads
