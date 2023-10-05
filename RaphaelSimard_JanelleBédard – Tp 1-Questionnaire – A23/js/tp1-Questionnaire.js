@@ -1,12 +1,18 @@
 "use strict"
-//Créations des variables et constantes et d'autres trucs randoms
+
 const rectangleDesDonnees = document.getElementById("zoneDeDonnees");
 const rectangle = document.createElement("div");
 rectangle.id = "rectangle";
-let indexCourrantDesQuestions = 0;
+
+//TODO trouver un moyen de ne pas utiliser de variable globale pour l'index de la question courante
+let indexCourrantQuestion = 0;
+
+
 //let tableauQuestionnaireDesBonnesQuestionsPromisCestLeBon = JSONaObjectJS();
-const leBONquestionnaire = new QuestionnaireQuiz();
-const laBONNEquestion = leBONquestionnaire.questions[indexCourrantDesQuestions];
+const unObjetQuestionnaireQuiz = new QuestionnaireQuiz();
+
+//TODO ICI LA BONNE QUESTION ÇA DEVRAIT TECHNIQUEMENT ÊTRE UN "NEW QUESTION" (ou pas finalement jsp)
+const unObjetQuestions = unObjetQuestionnaireQuiz.questions[indexCourrantQuestion];
 
 function construireInterfaceIntro() {
     rectangle.innerHTML = "";
@@ -21,13 +27,13 @@ function construireInterfaceIntro() {
  * Va aussi s'occuper d'ajouter +1 à l'index de la question courante pour passer à la prochaine question.
  */
 function construireInterfaceQuestion() {
-    indexCourrantDesQuestions++;
-    if (indexCourrantDesQuestions < leBONquestionnaire.questions.length) {
+    indexCourrantQuestion++;
+    if (indexCourrantQuestion < unObjetQuestionnaireQuiz.questions.length) {
         rectangle.innerHTML = "";
         rectangle.appendChild(creerBaliseX("br"));
         rectangle.appendChild(creerBaliseX("br"));
-        const laBONNEquestion = leBONquestionnaire.questions[indexCourrantDesQuestions];
-        affichageQuestion(laBONNEquestion, leBONquestionnaire);
+        const laBONNEquestion = unObjetQuestionnaireQuiz.questions[indexCourrantQuestion];
+        affichageQuestion(laBONNEquestion, unObjetQuestionnaireQuiz);
         boutonNextQuestion();
         boutonAbandonner();
     } else {
@@ -37,13 +43,13 @@ function construireInterfaceQuestion() {
 
 
 function affichageQuestion(questionObj, questionnaireObj) {
-    const questionCourante = questionObj;
     rectangle.innerHTML = "";
+    const questionCourante = questionObj;
     const nbrePoints = questionCourante.nbrePoints;
     const questionText = questionCourante.question;
     const reponses = questionCourante.reponses;
 
-    rectangle.appendChild(creerBaliseX("h1", "p1", "Question " + (indexCourrantDesQuestions + 1) + " de 5 pour " + nbrePoints + " points"));
+    rectangle.appendChild(creerBaliseX("h1", "p1", "Question " + (indexCourrantQuestion + 1) + " de 5 pour " + nbrePoints + " points"));
     rectangle.appendChild(creerBaliseX("p", "p2", questionText));
     for (let i = 0; i < reponses.length; i++) {
         let choixDeReponse = creerBaliseX("p", "choix");
