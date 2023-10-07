@@ -22,6 +22,11 @@ function construireInterfaceIntro() {
     rectangle.appendChild(creerBouton());
 }
 
+function gererInterfaceIntro() {
+
+}
+
+
 /**
  * Fonction qui s'occupe de créer l'interface des questions, les boutons, la question, les réponses, etc.
  * Va aussi s'occuper d'ajouter +1 à l'index de la question courante pour passer à la prochaine question.
@@ -40,6 +45,10 @@ function construireInterfaceQuestion() {
     } else {
         construireInterfaceFinal();
     }
+}
+
+function gererInterfaceQuestion() {
+
 }
 
 
@@ -75,6 +84,10 @@ function construireInterfaceFinal() {
 
 }
 
+function gererInterfaceFinal() {
+
+}
+
 function construireInterfaceAbandon() {
     rectangle.innerHTML = "";
     rectangle.appendChild(creerBaliseX("h1", "p1", "Tu...as.. abandonné..? Voici quand même ton résultat: "));
@@ -84,16 +97,15 @@ function construireInterfaceAbandon() {
 
 }
 
+function gererInterfaceAbandon() {
+
+}
+
 
 // Appel des fonctions:
 construireInterfaceIntro(rectangleDesDonnees.appendChild(rectangle));
 
 
-//TODO EFFACER ÇA ??
-//let choixDeReponse = creerBaliseX("p", "reponse", questionCourante.reponses[i]);
-//let choixDeReponse = creerTableau(questionCourante);
-// let choixDeReponse = creerLabel("input", "reponse", questionCourante.reponses[i]);
-// choixDeReponse.appendChild(creerInput("radio", "reponse"));
 
 
 
